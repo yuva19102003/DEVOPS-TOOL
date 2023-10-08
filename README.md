@@ -1,1 +1,6 @@
-# DEVOPS-TOOL-INSTALLAION
+# DEVOPS-TOOL
+
+prometheus
+Grafana
+argocd
+jenkins
