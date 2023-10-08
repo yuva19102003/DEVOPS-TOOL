@@ -9,7 +9,7 @@ To install ArgoCD in another namespace using Helm (the package manager for Kuber
 2. **Create a Namespace**: If the namespace where you want to install ArgoCD doesn't exist, create it using `kubectl`:
 
    ```bash
-   kubectl create namespace argocd-namespace
+   kubectl create namespace <argocd-namespace>
    ```
 
    Replace `argocd-namespace` with your desired namespace name.
@@ -17,7 +17,7 @@ To install ArgoCD in another namespace using Helm (the package manager for Kuber
 3. **Install ArgoCD Helm Chart**: Install the ArgoCD Helm chart into the desired namespace using Helm. Be sure to specify the namespace using the `--namespace` flag:
 
    ```bash
-   helm install argocd argo/argo-cd --namespace argocd-namespace
+   helm install argocd argo/argo-cd --namespace <argocd-namespace>
    ```
 
    This command installs ArgoCD into the `argocd-namespace`.
@@ -25,9 +25,9 @@ To install ArgoCD in another namespace using Helm (the package manager for Kuber
 4. **Access ArgoCD UI**: By default, ArgoCD deploys a LoadBalancer service to expose its UI. Depending on your Kubernetes cluster configuration, you might need to wait for the LoadBalancer to obtain an external IP address. You can check the service's status using:
 
    ```bash
-   kubectl get svc -n argocd-namespace
+   kubectl get svc -n <argocd-namespace>
    ```
-
+<img src="argocd-port-forwarding.png">
    Once the external IP address is available, you can access the ArgoCD UI via a web browser using the IP address and port 80.
 
    **Note**: If you're using a local or non-cloud Kubernetes cluster, you might need to use a different method to access the UI, such as port-forwarding, NodePort, or an ingress controller.
@@ -38,7 +38,7 @@ To install ArgoCD in another namespace using Helm (the package manager for Kuber
    - Password: Retrieve the password using:
 
      ```bash
-     kubectl get secret argocd-initial-admin-secret -n argocd-namespace -o jsonpath="{.data.password}" | base64 -d
+     kubectl get secret argocd-initial-admin-secret -n <argocd-namespace> -o jsonpath="{.data.password}" | base64 -d
      ```
 
    Copy the password and use it to log in.
