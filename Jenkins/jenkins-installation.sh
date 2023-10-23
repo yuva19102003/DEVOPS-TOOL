@@ -52,6 +52,6 @@ else
 fi
 echo "####################################################################################################################################################################################"
 echo "JENKINS LOGIN PASSWORD "
-cat /var/jenkins_home/secrets/initialAdminPassword > jenkins-password.txt
+sudo cat /var/lib/jenkins/secrets/initialAdminPassword > jenkins-password.txt
 echo "PASSWORD IS STORED IN 'jenkins-password.txt'.."
 echo "####################################################################################################################################################################################"
