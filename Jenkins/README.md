@@ -124,9 +124,10 @@ systemctl restart docker
 ```
 
 Once you are done with the above steps, it is better to restart Jenkins.
-
+FOR GIVING PERMISSION FOR DOCKER DEAMON FOR USING IT WITHOUT SUDO..
 ```
-http://<ec2-instance-public-ip>:8080/restart
+sudo chmod 666 /var/run/docker.sock
+
 ```
 
 The docker agent configuration is now successful.
