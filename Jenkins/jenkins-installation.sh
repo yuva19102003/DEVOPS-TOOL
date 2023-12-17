@@ -59,6 +59,7 @@ sudo systemctl start jenkins
 if systemctl is-active --quiet jenkins; then
     echo "JENKINS INSTALLED AND RUNNING SUCCESSFULLY"
     sudo systemctl status jenkins
+    :wq
 else
     echo "JENKINS NOT INSTALLED AND NOT RUNNING SUCCESSFULLY"
 fi
