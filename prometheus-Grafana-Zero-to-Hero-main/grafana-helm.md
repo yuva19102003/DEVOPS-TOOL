@@ -15,3 +15,7 @@
 ## Expose Grafana Service
 
 `kubectl expose service grafana — type=NodePort — target-port=3000 — name=grafana-ext`
+
+```bash
+yuva@yuva:~$    kubectl get secret --namespace monitoring grafana -o jsonpath="{.data.admin-password}" | base64 --decode ; echo
+```
