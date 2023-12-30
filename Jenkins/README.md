@@ -104,17 +104,7 @@ Wait for the Jenkins to be restarted.
 
 https://github.com/yuva19102003/DEVOPS-TOOL/blob/master/Docker/docker.md
 
-Once you are done with the above steps, it is better to restart Jenkins.
-
-                            (OR)
-                            
-FOR GIVING PERMISSION FOR DOCKER DEAMON FOR USING IT WITHOUT SUDO..
-```
-sudo chmod 666 /var/run/docker.sock
-
-```
-
-The docker agent configuration is now successful.
+DOCKER INSTALLATION IN THIS REPO...
 
 
 
