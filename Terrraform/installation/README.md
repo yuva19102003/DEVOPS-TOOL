@@ -1,5 +1,7 @@
----
+----
 # Install Terraform
+
+<img src="https://github.com/yuva19102003/DEVOPS-TOOL/blob/master/Terrraform/screenshots/terraform-installation.png?raw=true">
 
 ## Windows
 
@@ -22,4 +24,4 @@
 ## macOS
 
 - Follow the steps provided in the [`Downloads Page`](https://developer.hashicorp.com/terraform/downloads) for macOS.
----
+----
