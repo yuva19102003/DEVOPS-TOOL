@@ -61,6 +61,8 @@ You can continue to define more resources, variables, outputs, etc. in the `main
 Remember that Terraform uses HashiCorp Configuration Language (HCL) for its configuration files, and the syntax is designed to be human-readable and easy to understand. 
 Additionally, you can split your configurations into multiple files and use the `terraform` block in a separate configuration file (commonly `variables.tf` or `provider.tf`).
 
+
+### follow the documentation for more..[`Click Here`](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/instance)
 ----
 
 ## Terraform Commands
