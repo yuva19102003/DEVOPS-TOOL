@@ -4,7 +4,7 @@
 | Section | links |
 | --- | --- |
 | 01. installation | [`Click here`](https://github.com/yuva19102003/DEVOPS-TOOL/tree/master/Terrraform/installation) |
-| 02.  | [`Click here`]() |
+| 02. Structure and Commands | [`Click here`](https://github.com/yuva19102003/DEVOPS-TOOL/tree/master/Terrraform/Structure%20and%20Commands) |
 
 ----
 ### Introduction
