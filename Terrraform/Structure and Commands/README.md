@@ -33,17 +33,17 @@ Let's break down the structure:
 ### 1. **Provider Configuration**:
  This section is where you configure the provider for your infrastructure. The provider is the service that Terraform will use to create and manage resources. Examples of providers include AWS, Azure, Google Cloud, etc.
 
-    ```hcl
+  ```hcl
     provider "provider_name" {
       # Provider-specific configuration options
       # e.g., access_key, secret_key for AWS
     }
-    ```
+   ```
 
 ### 2. **Resource Definitions**:
  This section is where you define the resources you want to create. Resources represent infrastructure components such as virtual machines, databases, networks, etc. The structure for a resource block is as follows:
 
-    ```hcl
+ ```hcl
     resource "resource_type" "resource_name" {
       # Resource-specific configuration options
       # e.g., name, region, size for an AWS EC2 instance
@@ -51,9 +51,9 @@ Let's break down the structure:
       # Attribute assignments
       # e.g., attribute_name = "value"
     }
-    ```
+ ```
 
-    Replace `resource_type` with the type of resource you want to create (e.g., `aws_instance` for an AWS EC2 instance) and `resource_name` with a unique name for the resource.
+  Replace `resource_type` with the type of resource you want to create (e.g., `aws_instance` for an AWS EC2 instance) and `resource_name` with a unique name for the resource.
 
 ### 3. **Additional Resources and Configurations**:
 You can continue to define more resources, variables, outputs, etc. in the `main.tf` file. This is where you build the complete configuration for your infrastructure.
