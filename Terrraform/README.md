@@ -1,4 +1,4 @@
-# TERRAFORM SERIES..
+# TERRAFORM SERIES.. [`You Tube Playlist Link`](https://www.youtube.com/playlist?list=PLIRBsdmeOqpvN2K7MyUBXMmPKxaSkj81s)
 <img src="https://github.com/yuva19102003/DEVOPS-TOOL/blob/master/Terrraform/screenshots/terraform.png?raw=true">
 
 | Section | links |
