@@ -1,13 +1,13 @@
 
-
+----
 ## Terraform Commands
 
 
 ### Initialize the Terraform working directory:
 
-    ```bash
+ ```bash
     terraform init
-    ```
+ ```
 
 ### Plan
 
