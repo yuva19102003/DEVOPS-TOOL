@@ -2,7 +2,7 @@
 
 # Advanced Terraform Configuration
 
-<img src="">
+<img src="https://github.com/yuva19102003/DEVOPS-TOOL/blob/master/Terrraform/screenshots/Advanced%20configuration.png">
 
 #### Understanding Providers and Resources
 
