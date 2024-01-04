@@ -2,6 +2,7 @@
 
 # Advanced Terraform Configuration
 
+<img src="">
 
 #### Understanding Providers and Resources
 
