@@ -6,6 +6,10 @@
 | 01. installation | [`Click here`](https://github.com/yuva19102003/DEVOPS-TOOL/tree/master/Terrraform/installation) |
 | 02. Structure and Commands | [`Click here`](https://github.com/yuva19102003/DEVOPS-TOOL/tree/master/Terrraform/Structure%20and%20Commands) |
 | 03. Advanced Configuration | [`Click Here`](https://github.com/yuva19102003/DEVOPS-TOOL/tree/master/Terrraform/Advanced%20Configuration) |
+| 04. Modules | [`Click Here`](https://github.com/yuva19102003/DEVOPS-TOOL/tree/master/Terrraform/Modules) |
+| 05. | [`Click Here`]() |
+| 06. | [`Click Here`]() |
+| 07. | [`Click Here`]() |
 
 ----
 ### Introduction
