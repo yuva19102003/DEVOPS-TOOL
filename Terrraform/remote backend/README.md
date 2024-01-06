@@ -115,5 +115,4 @@ By following these steps, you can securely store your Terraform state in S3 with
 ```
 
 Please note that you should adapt the configuration and commands to your specific AWS environment and requirements.
-
 ----
