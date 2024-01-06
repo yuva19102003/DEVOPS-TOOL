@@ -1,7 +1,7 @@
 ----
 # REMOTE BACKEND...
 
-<img src="">
+<img src="https://github.com/yuva19102003/DEVOPS-TOOL/blob/master/Terrraform/screenshots/remote%20backend.png?raw=true">
 
 **Terraform State File**
 
