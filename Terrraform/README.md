@@ -10,7 +10,7 @@
 | 05. Remote Backend | [`Click Here`](https://github.com/yuva19102003/DEVOPS-TOOL/tree/master/Terrraform/remote%20backend) |
 | 06. Workspaces | [`Click Here`](https://github.com/yuva19102003/DEVOPS-TOOL/tree/master/Terrraform/Workspaces) |
 | 07. UserData and Provisioning | [`Click Here`](https://github.com/yuva19102003/DEVOPS-TOOL/tree/master/Terrraform/userdata%20and%20provisioning) |
-| 08. Hashicorp Vault| [`Click Here`]() |
+| 08. Hashicorp Vault| [`Click Here`](https://github.com/yuva19102003/DEVOPS-TOOL/tree/master/Terrraform/hashicorp%20vault) |
 
 ----
 ### Introduction
