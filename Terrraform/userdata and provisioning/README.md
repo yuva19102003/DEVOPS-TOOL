@@ -1,3 +1,9 @@
+----
+
+# userdata and proviaioning
+
+<imig src="">
+
 In the context of Terraform, user data and provisioners are features that allow you to customize and configure instances launched by infrastructure resources. They are commonly used with cloud providers like AWS, Azure, Google Cloud, etc.
 
 ### User Data
