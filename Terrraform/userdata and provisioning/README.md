@@ -124,3 +124,5 @@ In this example, the `local-exec` provisioner simply executes a local command on
 Choose the provisioner type based on your specific use case and whether you need to execute commands on the remote resource or locally on the machine running Terraform.
 
 **Note:** While both user data and provisioners can be powerful tools, it's generally recommended to use configuration management tools (like Ansible, Chef, or Puppet) for more robust and maintainable infrastructure setups, especially in larger or more complex environments.
+
+----
