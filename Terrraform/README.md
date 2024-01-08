@@ -8,8 +8,9 @@
 | 03. Advanced Configuration | [`Click Here`](https://github.com/yuva19102003/DEVOPS-TOOL/tree/master/Terrraform/Advanced%20Configuration) |
 | 04. Modules | [`Click Here`](https://github.com/yuva19102003/DEVOPS-TOOL/tree/master/Terrraform/Modules) |
 | 05. Remote Backend | [`Click Here`](https://github.com/yuva19102003/DEVOPS-TOOL/tree/master/Terrraform/remote%20backend) |
-| 06. | [`Click Here`]() |
-| 07. | [`Click Here`]() |
+| 06. Workspaces | [`Click Here`]() |
+| 07. Provisioning | [`Click Here`]() |
+| 08. Hashicorp Vault| [`Click Here`]() |
 
 ----
 ### Introduction
