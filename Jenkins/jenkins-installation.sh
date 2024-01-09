@@ -56,12 +56,6 @@ echo "##########################################################################
 sudo systemctl enable jenkins
 sudo systemctl start jenkins
 
-if systemctl is-active --quiet jenkins; then
-    echo "JENKINS INSTALLED AND RUNNING SUCCESSFULLY"
-    sudo systemctl status jenkins
-else
-    echo "JENKINS NOT INSTALLED AND NOT RUNNING SUCCESSFULLY"
-fi
 echo "####################################################################################################################################################################################"
 echo "JENKINS LOGIN PASSWORD "
 sudo cat /var/lib/jenkins/secrets/initialAdminPassword > jenkins-password.txt
