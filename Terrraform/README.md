@@ -23,11 +23,11 @@ Terraform is an open-source Infrastructure as Code (IaC) tool developed by Hashi
 
 ### Key Features
 
-  -Declarative Configuration: Infrastructure is defined using a human-readable configuration language, making it easy to understand and maintain.
-  -Multi-Cloud Support: Terraform supports a wide range of cloud providers, enabling users to manage resources across multiple environments seamlessly.
-  -Resource Graph: Terraform builds a dependency graph of resources to determine the optimal order for provisioning and managing infrastructure.
-  -Idempotent Operations: Terraform ensures that the desired infrastructure state is achieved, making it safe to apply configurations repeatedly without causing unintended changes.
-  -Extensibility: Users can extend Terraform's functionality through providers, modules, and custom scripts.
+  1. Declarative Configuration: Infrastructure is defined using a human-readable configuration language, making it easy to understand and maintain.
+  2. Multi-Cloud Support: Terraform supports a wide range of cloud providers, enabling users to manage resources across multiple environments seamlessly.
+  3. Resource Graph: Terraform builds a dependency graph of resources to determine the optimal order for provisioning and managing infrastructure.
+  4. Idempotent Operations: Terraform ensures that the desired infrastructure state is achieved, making it safe to apply configurations repeatedly without causing unintended changes.
+  5. Extensibility: Users can extend Terraform's functionality through providers, modules, and custom scripts.
 
 ### Contributing
 
