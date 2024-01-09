@@ -1,4 +1,5 @@
-To install ArgoCD in another namespace using Helm (the package manager for Kubernetes), you can follow these steps:
+# To install ArgoCD in another namespace using Helm (the package manager for Kubernetes), you can follow these steps:
+----
 
 1. **Add the ArgoCD Helm Repository**: First, you need to add the ArgoCD Helm repository to your Helm CLI. This allows you to fetch the ArgoCD Helm chart from their repository.
 
@@ -49,3 +50,6 @@ To install ArgoCD in another namespace using Helm (the package manager for Kuber
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 <img src="argocd-workflow.png">
 This installation method utilizes Helm to simplify the deployment process for ArgoCD in a specified namespace. Make sure to adjust namespace names and configurations according to your specific requirements.
+
+
+----
