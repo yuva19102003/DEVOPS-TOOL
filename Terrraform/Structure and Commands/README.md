@@ -66,7 +66,7 @@ Additionally, you can split your configurations into multiple files and use the 
 ----
 
 ## Terraform Commands
-
+[`terraform commands`](https://developer.hashicorp.com/terraform/cli)
 
 ### Initialize the Terraform working directory:
 
