@@ -24,6 +24,11 @@ resource "aws_instance" "example" {
               echo "Hello from the user data script" > /var/www/html/index.html
               systemctl start apache2
               EOF
+
+              OR
+
+user_data = file("userdata.sh")
+
 }
 ```
 
@@ -66,10 +71,28 @@ In this example, the `provisioner` block uses the `remote-exec` type to execute 
 
 ### connection block:
 
+```hcl
+
+    connection {
+      type = "ssh"
+      user = "ubuntu"
+      password = ""
+      private_key = file("demo.pem")
+      host = self.public_ip
+    }
+```
+
 <img src="https://github.com/yuva19102003/DEVOPS-TOOL/blob/master/Terrraform/screenshots/userdata%20and%20provisioning/connection%20block.png">
 
 ### file provisioning:
 
+```hcl
+    provisioner "file" {
+        source = "userdata.sh"
+        destination = "/home/ubuntu/userdata.sh" 
+      
+    }
+```
 <img src="https://github.com/yuva19102003/DEVOPS-TOOL/blob/master/Terrraform/screenshots/userdata%20and%20provisioning/provision%20file.png">
 
 ### Key Differences
@@ -93,25 +116,17 @@ Certainly! Both `remote-exec` and `local-exec` are provisioner types in Terrafor
 The `remote-exec` provisioner is used to execute commands on the remote instance after it has been created.
 
 ```hcl
-resource "aws_instance" "example" {
-  ami           = "ami-12345678"
-  instance_type = "t2.micro"
+    provisioner "remote-exec" {
+      inline = [
+        "sudo apt update -y",
+        "sudo apt install docker.io -y",
+        "cd /home/ubuntu",
+        "sudo docker pull yuva19102003/apache:latest",
+        "sudo docker run -d -p 8080:80 --name web_server yuva19102003/apache:latest"
 
-  provisioner "remote-exec" {
-    inline = [
-      "sudo apt-get update",
-      "sudo apt-get install -y apache2",
-      "echo 'Hello from remote-exec provisioner' > /var/www/html/index.html",
-    ]
-
-    connection {
-      type        = "ssh"
-      user        = "ubuntu"
-      private_key = file("~/.ssh/id_rsa")  # Path to your private key
-      host        = self.public_ip
+       ]
+    
     }
-  }
-}
 ```
 <img src="https://github.com/yuva19102003/DEVOPS-TOOL/blob/master/Terrraform/screenshots/userdata%20and%20provisioning/remote%20exec.png">
 
@@ -122,14 +137,12 @@ In this example, the `remote-exec` provisioner is used to SSH into the created E
 The `local-exec` provisioner is used to execute commands on the machine running Terraform. This can be useful for tasks that don't require access to the remote resource.
 
 ```hcl
-resource "aws_instance" "example" {
-  ami           = "ami-12345678"
-  instance_type = "t2.micro"
+    provisioner "local-exec" {
+            command = "echo http://${self.public_ip}:8080 >> website-link.txt"
 
-  provisioner "local-exec" {
-    command = "echo 'Hello from local-exec provisioner'"
-  }
-}
+      
+    }
+
 ```
 
 In this example, the `local-exec` provisioner simply executes a local command on the machine running Terraform.
