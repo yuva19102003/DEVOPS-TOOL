@@ -79,7 +79,7 @@ To create an AWS EC2 instance with Ubuntu, you can use the AWS Management Consol
 - Select the instance type that you want to use.
 - Configure the instance settings.
 - Click on the Launch button.
-
+<img src ="https://github.com/yuva19102003/DEVOPS-TOOL/blob/master/Terrraform/screenshots/Hashicorp%20Vault/1.png">
 ## Install Vault on the EC2 instance
 
 To install Vault on the EC2 instance, you can use the following steps:
@@ -89,7 +89,7 @@ To install Vault on the EC2 instance, you can use the following steps:
 ```
 sudo apt update && sudo apt install gpg
 ```
-
+<img src="https://github.com/yuva19102003/DEVOPS-TOOL/blob/master/Terrraform/screenshots/Hashicorp%20Vault/2.png">
 **Download the signing key to a new keyring**
 
 ```
@@ -107,7 +107,7 @@ gpg --no-default-keyring --keyring /usr/share/keyrings/hashicorp-archive-keyring
 ```
 echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/hashicorp-archive-keyring.gpg] https://apt.releases.hashicorp.com $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/hashicorp.list
 ```
-
+<img src="https://github.com/yuva19102003/DEVOPS-TOOL/blob/master/Terrraform/screenshots/Hashicorp%20Vault/3.png">
 ```
 sudo apt update
 ```
@@ -117,7 +117,7 @@ sudo apt update
 ```
 sudo apt install vault
 ```
-
+<img src="https://github.com/yuva19102003/DEVOPS-TOOL/blob/master/Terrraform/screenshots/Hashicorp%20Vault/4.png">
 ## Start Vault.
 
 To start Vault, you can use the following command:
@@ -125,8 +125,14 @@ To start Vault, you can use the following command:
 ```
 vault server -dev -dev-listen-address="0.0.0.0:8200"
 ```
+use the export id which is given in the dev server 
 
+<img src="https://github.com/yuva19102003/DEVOPS-TOOL/blob/master/Terrraform/screenshots/Hashicorp%20Vault/5.png">
 ## Configure Terraform to read the secret from Vault.
+
+<img src="https://github.com/yuva19102003/DEVOPS-TOOL/blob/master/Terrraform/screenshots/Hashicorp%20Vault/6.png">
+<img src="https://github.com/yuva19102003/DEVOPS-TOOL/blob/master/Terrraform/screenshots/Hashicorp%20Vault/7.png">
+<img src="https://github.com/yuva19102003/DEVOPS-TOOL/blob/master/Terrraform/screenshots/Hashicorp%20Vault/8.png">
 
 Detailed steps to enable and configure AppRole authentication in HashiCorp Vault:
 
@@ -208,7 +214,7 @@ To generate a Secret ID, you can use the following command:
 ```bash
 vault write -f auth/approle/role/terraform/secret-id
    ```
-
+<img src="https://github.com/yuva19102003/DEVOPS-TOOL/blob/master/Terrraform/screenshots/Hashicorp%20Vault/9.png">
 This command generates a Secret ID and provides it in the response. Save the Secret ID securely, as it will be used for Terraform authentication.
 
 
