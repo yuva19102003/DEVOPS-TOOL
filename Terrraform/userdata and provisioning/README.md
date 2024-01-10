@@ -150,7 +150,7 @@ In this example, the `local-exec` provisioner simply executes a local command on
 <img src="https://github.com/yuva19102003/DEVOPS-TOOL/blob/master/Terrraform/screenshots/userdata%20and%20provisioning/local%20exec.png">
 
 ---
-output:
+### output:
 
 <img src="https://github.com/yuva19102003/DEVOPS-TOOL/blob/master/Terrraform/screenshots/userdata%20and%20provisioning/output.png">
 
