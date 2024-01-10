@@ -27,6 +27,18 @@ resource "aws_instance" "example" {
 }
 ```
 
+<img src="https://github.com/yuva19102003/DEVOPS-TOOL/blob/master/Terrraform/screenshots/userdata%20and%20provisioning/userdata.png">
+
+---
+
+<img src="https://github.com/yuva19102003/DEVOPS-TOOL/blob/master/Terrraform/screenshots/userdata%20and%20provisioning/userdata.sh.png">
+
+---
+
+<img src="https://github.com/yuva19102003/DEVOPS-TOOL/blob/master/Terrraform/screenshots/userdata%20and%20provisioning/userdata.sh.running.png">
+
+---
+
 In this example, the `user_data` attribute contains a bash script that installs Apache and creates a simple HTML file. This script is executed when the instance is launched.
 
 ### Provisioners
@@ -51,6 +63,14 @@ resource "aws_instance" "example" {
 ```
 
 In this example, the `provisioner` block uses the `remote-exec` type to execute a series of commands on the instance after it has been created. Similar to user data, these commands can include software installations, configurations, etc.
+
+### connection block:
+
+<img src="https://github.com/yuva19102003/DEVOPS-TOOL/blob/master/Terrraform/screenshots/userdata%20and%20provisioning/connection%20block.png">
+
+### file provisioning:
+
+<img src="https://github.com/yuva19102003/DEVOPS-TOOL/blob/master/Terrraform/screenshots/userdata%20and%20provisioning/provision%20file.png">
 
 ### Key Differences
 
@@ -93,6 +113,7 @@ resource "aws_instance" "example" {
   }
 }
 ```
+<img src="https://github.com/yuva19102003/DEVOPS-TOOL/blob/master/Terrraform/screenshots/userdata%20and%20provisioning/remote%20exec.png">
 
 In this example, the `remote-exec` provisioner is used to SSH into the created EC2 instance and execute the specified commands.
 
@@ -112,6 +133,14 @@ resource "aws_instance" "example" {
 ```
 
 In this example, the `local-exec` provisioner simply executes a local command on the machine running Terraform.
+
+<img src="https://github.com/yuva19102003/DEVOPS-TOOL/blob/master/Terrraform/screenshots/userdata%20and%20provisioning/local%20exec.png">
+
+---
+output:
+
+<img src="https://github.com/yuva19102003/DEVOPS-TOOL/blob/master/Terrraform/screenshots/userdata%20and%20provisioning/output.png">
+
 
 ### Important Considerations:
 
