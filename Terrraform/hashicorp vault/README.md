@@ -79,7 +79,9 @@ To create an AWS EC2 instance with Ubuntu, you can use the AWS Management Consol
 - Select the instance type that you want to use.
 - Configure the instance settings.
 - Click on the Launch button.
+- 
 <img src ="https://github.com/yuva19102003/DEVOPS-TOOL/blob/master/Terrraform/screenshots/Hashicorp%20Vault/1.png">
+
 ## Install Vault on the EC2 instance
 
 To install Vault on the EC2 instance, you can use the following steps:
@@ -90,6 +92,7 @@ To install Vault on the EC2 instance, you can use the following steps:
 sudo apt update && sudo apt install gpg
 ```
 <img src="https://github.com/yuva19102003/DEVOPS-TOOL/blob/master/Terrraform/screenshots/Hashicorp%20Vault/2.png">
+
 **Download the signing key to a new keyring**
 
 ```
@@ -108,7 +111,8 @@ gpg --no-default-keyring --keyring /usr/share/keyrings/hashicorp-archive-keyring
 echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/hashicorp-archive-keyring.gpg] https://apt.releases.hashicorp.com $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/hashicorp.list
 ```
 <img src="https://github.com/yuva19102003/DEVOPS-TOOL/blob/master/Terrraform/screenshots/Hashicorp%20Vault/3.png">
-```
+
+```bash
 sudo apt update
 ```
 
@@ -118,6 +122,7 @@ sudo apt update
 sudo apt install vault
 ```
 <img src="https://github.com/yuva19102003/DEVOPS-TOOL/blob/master/Terrraform/screenshots/Hashicorp%20Vault/4.png">
+
 ## Start Vault.
 
 To start Vault, you can use the following command:
@@ -128,6 +133,7 @@ vault server -dev -dev-listen-address="0.0.0.0:8200"
 use the export id which is given in the dev server 
 
 <img src="https://github.com/yuva19102003/DEVOPS-TOOL/blob/master/Terrraform/screenshots/Hashicorp%20Vault/5.png">
+
 ## Configure Terraform to read the secret from Vault.
 
 <img src="https://github.com/yuva19102003/DEVOPS-TOOL/blob/master/Terrraform/screenshots/Hashicorp%20Vault/6.png">
