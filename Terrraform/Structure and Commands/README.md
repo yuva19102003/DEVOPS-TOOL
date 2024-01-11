@@ -134,6 +134,7 @@ The following flags are available:
 
 it will validate the terraform syntax
 
+
 ```bash
 terraform validate
 ```
