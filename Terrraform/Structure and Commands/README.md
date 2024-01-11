@@ -123,25 +123,25 @@ terraform fmt
 ```
 
 The following flags are available:
-
+```bash
 -list=false 
-
+```
 - Don't list the files containing formatting inconsistencies.
-
+```bash
 -write=false 
-
+```
 - Don't overwrite the input files. (This is implied by -check or when the input is STDIN.)
-
+```bash
 -diff 
-
+```
 - Display diffs of formatting changes.
-
+```bash
 -check 
-
+```
 - Check if the input is formatted. Exit status will be 0 if all input is properly formatted. If not, exit status will be non-zero and the command will output a list of filenames whose files are not properly formatted.
-
+```bash
 -recursive 
-
+```
 - Also process files in subdirectories. By default, only the given directory (or current directory) is processed.
 
 ### validate
