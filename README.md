@@ -5,7 +5,7 @@
 | S.no | section | logo | link |
 | --- | --- | --- | --- |
 
-| 1 | ### prometheus |   |   |
+| 1 | ### prometheus |  <> | <>  |
 | 2 | ### Grafana |   |   |
 | 3 | ### argocd |   |   |
 | 4 | ### jenkins |   |   |
