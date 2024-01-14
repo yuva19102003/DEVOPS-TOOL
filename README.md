@@ -4,7 +4,8 @@
 
 | S.no | section | logo | link |
 | --- | --- | --- | --- |
-| 01. | Docker | <img src="https://www.google.com/search?hl=en-US&ie=UTF-8&source=chrome&q=Docker%20logo#vhid=tz7Afmu-xOTZGM&vssid=l"> | click here |
+| 01. | Docker | <img align="right" src="https://user-images.githubusercontent.com/51878265/200594916-47ba8a4c-fb94-4953-b179-dfb542df9499.png" height="100" alt="docker"> 
+ | click here |
 
 
 ----
