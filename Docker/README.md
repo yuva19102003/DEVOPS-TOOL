@@ -1,3 +1,4 @@
+----
 # INSTALLATION
 
 
@@ -16,3 +17,4 @@ sudo apt-get install docker.io -y
  newgrp docker
  sudo chmod 777 /var/run/docker.sock
 ```
+----
