@@ -47,8 +47,11 @@
 
 6. **Deploy Applications**: You can now use the ArgoCD UI or ArgoCD CLI to deploy and manage applications within the `argocd-namespace`.
 <img src="argocd-applicaation.png">
-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+----
+
 <img src="argocd-workflow.png">
+
 This installation method utilizes Helm to simplify the deployment process for ArgoCD in a specified namespace. Make sure to adjust namespace names and configurations according to your specific requirements.
 
 
