@@ -1,5 +1,6 @@
 ----
-# DEVOPS-TOOL
+<center># DEVOPS-TOOL</center>
+
 
 
 | S.no | section | logo | link |
