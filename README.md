@@ -1,12 +1,7 @@
 
 ----
-<html>
-  <title>
-   DEVOPS-TOOL
-    </title>
-  <body>
-    <center>
-
+# DEVOPS TOOLS..
+---
 
 
 
@@ -20,7 +15,5 @@
 | 06. | Grafana | <img align="right" src="https://github.com/yuva19102003/DEVOPS-TOOL/blob/master/logo/grafana.png" height="100" alt="grafana">  |  [`grafana`](https://github.com/yuva19102003/DEVOPS-TOOL/tree/master/grafana) |
 
 
-</center>
-  </body>
-  </html>
+
 ----
