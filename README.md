@@ -14,5 +14,4 @@
 | 05. | Prometheus | <img align="right" src="https://github.com/yuva19102003/DEVOPS-TOOL/blob/master/logo/Prometheus.png" height="100" alt="prometheus">  |  [`prometheus`](https://github.com/yuva19102003/DEVOPS-TOOL/tree/master/prometheus) |
 | 06. | Grafana | <img align="right" src="https://github.com/yuva19102003/DEVOPS-TOOL/blob/master/logo/grafana.png" height="100" alt="grafana">  |  [`grafana`](https://github.com/yuva19102003/DEVOPS-TOOL/tree/master/grafana) |
 
-![Tux, the Linux mascot](/logo/terraform.png)
 ----
