@@ -1,15 +1,15 @@
-## INSTALLATION
+# INSTALLATION
 
 
-- Set up Docker on the EC2 instance:
+## Set up Docker on the EC2 instance:
 
-1, INSTALLING DOCKER :
+### 1. INSTALLING DOCKER :
     
 ```bash 
 sudo apt-get update
 sudo apt-get install docker.io -y
 ```
-2, GIVING ROOT USER PERMISSION TO DOCKER DEAMON :
+### 2. GIVING ROOT USER PERMISSION TO DOCKER DEAMON :
     
 ```bash
  sudo usermod -aG docker $USER  
