@@ -1,6 +1,6 @@
 
 ----
-# DEVOPS TOOLS..
+# DEVOPS TOOLS
 ---
 
 
