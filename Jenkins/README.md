@@ -91,6 +91,8 @@ Jenkins Installation is Successful. You can now starting using the Jenkins
 
 <img width="990" alt="Screenshot 2023-02-01 at 11 14 13 AM" src="https://user-images.githubusercontent.com/43399466/215961440-3f13f82b-61a2-4117-88bc-0da265a67fa7.png">
 
+---
+
 ## Install the Docker Pipeline plugin in Jenkins:
 
    - Log in to Jenkins.
@@ -110,6 +112,6 @@ https://github.com/yuva19102003/DEVOPS-TOOL/blob/master/Docker/docker.md
 
 DOCKER INSTALLATION IN THIS REPO...
 
-
+----
 
 
