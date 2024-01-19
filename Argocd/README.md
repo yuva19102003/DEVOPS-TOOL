@@ -55,4 +55,5 @@
 This installation method utilizes Helm to simplify the deployment process for ArgoCD in a specified namespace. Make sure to adjust namespace names and configurations according to your specific requirements.
 
 
+
 ----
