@@ -4,6 +4,8 @@
 
 <img src="https://github.com/yuva19102003/DEVOPS-TOOL/blob/master/Terrraform/screenshots/structure-and-commands.png">
 
+---
+
 ## terraform Structure
 
 In the context of Terraform, a popular Infrastructure as Code (IaC) tool, the `main.tf` file is typically used to define the main configuration for your infrastructure. 
