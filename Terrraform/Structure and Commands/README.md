@@ -44,6 +44,7 @@ Let's break down the structure:
    ```
 
 ### 2. **Resource Definitions**:
+
  This section is where you define the resources you want to create. Resources represent infrastructure components such as virtual machines, databases, networks, etc. The structure for a resource block is as follows:
 
  ```hcl
@@ -59,6 +60,7 @@ Let's break down the structure:
   Replace `resource_type` with the type of resource you want to create (e.g., `aws_instance` for an AWS EC2 instance) and `resource_name` with a unique name for the resource.
 
 ### 3. **Additional Resources and Configurations**:
+
 You can continue to define more resources, variables, outputs, etc. in the `main.tf` file. This is where you build the complete configuration for your infrastructure.
 
 Remember that Terraform uses HashiCorp Configuration Language (HCL) for its configuration files, and the syntax is designed to be human-readable and easy to understand. 
@@ -66,9 +68,11 @@ Additionally, you can split your configurations into multiple files and use the 
 
 
 ### follow the documentation for more..[`Click Here`](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/instance)
+
 ----
 
 ## Terraform Commands
+
 [`terraform commands`](https://developer.hashicorp.com/terraform/cli)
 
 ### Initialize the Terraform working directory:
