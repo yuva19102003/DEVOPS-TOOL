@@ -15,11 +15,9 @@ sudo chown -R root:root /usr/local/go
 
 mkdir -p $HOME/go/{bin,src}
 
-echo "export GOPATH=$HOME/go" >> ~/.profile
-echo "export PATH=$PATH:$GOPATH/bin" >> ~/.profile
-echo "export PATH=$PATH:$GOPATH/bin:/usr/local/go/bin" >> ~/.profile
+cat profile.txt >> ~/.profile
 
-sudo . ~/.profile
+. ~/.profile
 
 echo $PATH
 
