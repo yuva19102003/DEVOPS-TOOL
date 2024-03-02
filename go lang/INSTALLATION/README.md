@@ -1,5 +1,8 @@
 
  # Golang Installation 
+
+## download golang tar file
+
  ```bash
 sudo wget https://golang.org/dl/go1.22.0.linux-amd64.tar.gz
 
@@ -9,6 +12,7 @@ sudo wget https://golang.org/dl/go1.22.0.linux-amd64.tar.gz
 sha256sum go1.22.0.linux-amd64.tar.gz
 
  ```
+
 
  ```bash
 sudo tar -C /usr/local -xzf go1.22.0.linux-amd64.tar.gz
