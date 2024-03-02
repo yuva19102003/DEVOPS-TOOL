@@ -18,7 +18,7 @@ extract the tar file
 sudo tar -C /usr/local -xzf go1.22.0.linux-amd64.tar.gz
 
  ```
-
+root access for the folder
  ```bash
 sudo chown -R root:root /usr/local/go
 
