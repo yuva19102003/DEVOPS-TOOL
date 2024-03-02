@@ -46,7 +46,7 @@ export PATH=$PATH:$GOPATH/bin:/usr/local/go/bin
  ```bash
 echo $PATH
  ```
-
+check the version 
  ```bash
 go version
  ```
