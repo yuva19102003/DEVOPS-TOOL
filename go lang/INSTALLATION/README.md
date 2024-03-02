@@ -28,7 +28,7 @@ sudo chown -R root:root /usr/local/go
 mkdir -p $HOME/go/{bin,src}
 
  ```
-
+set environment variables for golang
  ```bash
 nano ~/.profile
  ```
