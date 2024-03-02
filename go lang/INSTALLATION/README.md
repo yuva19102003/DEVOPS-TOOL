@@ -1,6 +1,6 @@
 
  # Golang Installation 
-
+---
 download golang tar file
 
  ```bash
@@ -50,3 +50,4 @@ check the version
  ```bash
 go version
  ```
+---
