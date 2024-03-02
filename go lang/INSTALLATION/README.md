@@ -1,7 +1,9 @@
 
  # Golang Installation 
 
-download golang tar file
+## installation command
+
+### download golang tar file
 
  ```bash
 sudo wget https://golang.org/dl/go1.22.0.linux-amd64.tar.gz
@@ -12,7 +14,7 @@ sudo wget https://golang.org/dl/go1.22.0.linux-amd64.tar.gz
 sha256sum go1.22.0.linux-amd64.tar.gz
 
  ```
-extract the tar file
+### extract the tar file
 
  ```bash
 sudo tar -C /usr/local -xzf go1.22.0.linux-amd64.tar.gz
@@ -28,7 +30,8 @@ sudo chown -R root:root /usr/local/go
 mkdir -p $HOME/go/{bin,src}
 
  ```
-set environment variables for golang
+### set environment variables for golang
+
  ```bash
 nano ~/.profile
  ```
@@ -46,8 +49,11 @@ export PATH=$PATH:$GOPATH/bin:/usr/local/go/bin
  ```bash
 echo $PATH
  ```
-check the version 
+### check the version 
+
  ```bash
 go version
  ```
----
+----
+ 
+## script mode :
