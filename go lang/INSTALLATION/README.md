@@ -1,6 +1,6 @@
 
  # Golang Installation 
----
+
 download golang tar file
 
  ```bash
