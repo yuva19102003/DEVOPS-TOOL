@@ -59,4 +59,9 @@ go version
  
 ## script mode :
 
+
+```bash
+sha256sum go1.22.0.linux-amd64.tar.gz
+
+ ```
 ----
