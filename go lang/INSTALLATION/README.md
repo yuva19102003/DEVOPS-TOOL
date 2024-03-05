@@ -62,8 +62,17 @@ go version
 
 ```bash
 wget https://github.com/yuva19102003/DEVOPS-TOOL/raw/master/go%20lang/INSTALLATION/installation.zip
-unzip installation.zip 
-
  ```
+```bash
+unzip installation.zip
+```
+
+```bash
+cd
+```
+```bash
+./
+```
+
 
 ----
