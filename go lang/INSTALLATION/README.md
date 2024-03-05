@@ -68,10 +68,10 @@ unzip installation.zip
 ```
 
 ```bash
-cd
+cd installation
 ```
 ```bash
-./
+./installation
 ```
 
 
