@@ -73,6 +73,8 @@ cd installation
 ```bash
 ./golang-install.sh
 ```
-
+ ```bash
+go version
+ ```
 
 ----
