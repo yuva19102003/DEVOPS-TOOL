@@ -71,7 +71,7 @@ unzip installation.zip
 cd installation
 ```
 ```bash
-./installation
+./golang-install.sh
 ```
 
 
