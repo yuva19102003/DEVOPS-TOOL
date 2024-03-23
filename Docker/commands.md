@@ -13,7 +13,7 @@
 
 ## Getting Started
 
-Before you begin, make sure you have Docker installed on your system. You can download it from the [Docker website](https://www.docker.com/get-started).
+Before you begin, could you ensure you have Docker installed on your system? You can download it from the [Docker website](https://www.docker.com/get-started).
 
 To check if Docker is installed and running:
 
@@ -224,7 +224,7 @@ docker pull registry-url/image-name:tag
 ### 9. Docker Stats
 
 #### Monitor Container Resource Usage
-To monitor resource usage of a running container:
+To monitor the resource usage of a running container:
 
 ```bash
 docker stats container-id
@@ -243,7 +243,7 @@ mounting the docker socket to inside a docker container
 
 which is for
 
-using docker inside a docker image
+### using docker inside a docker image
 ```bash
 docker run -it -v /var/run/docker.sock:/var/run/docker.sock docker-image:version bin/bash
 ```
