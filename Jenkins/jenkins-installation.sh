@@ -1,6 +1,5 @@
 #!/bin/bash
 # this jenkins installation shell script is for installing jenkins in ubuntu ec2 instances
-
 echo "####################################################################################################################################################################################"
 echo "******* JENKINS INSTALLATION ********"
 
