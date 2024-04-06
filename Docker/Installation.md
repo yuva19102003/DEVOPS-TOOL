@@ -2,7 +2,6 @@
 # INSTALLATION
 
 ## Set up Docker on the EC2 instance:
-
 ### 1. INSTALLING DOCKER :
     
 ```bash 
