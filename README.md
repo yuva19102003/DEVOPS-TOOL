@@ -12,7 +12,7 @@
 | 05. | Prometheus | <img align="right" src="https://github.com/yuva19102003/DEVOPS-TOOL/blob/master/logo/Prometheus.png" height="100" alt="prometheus">  |  [`prometheus`](https://github.com/yuva19102003/DEVOPS-TOOL/tree/master/prometheus) |
 | 06. | Grafana | <img align="right" src="https://github.com/yuva19102003/DEVOPS-TOOL/blob/master/logo/grafana.png" height="100" alt="grafana">  |  [`grafana`](https://github.com/yuva19102003/DEVOPS-TOOL/tree/master/grafana) |
 | 07. | GoLang | <img align="right" src="https://github.com/yuva19102003/DEVOPS-TOOL/blob/master/logo/golang.png" height="100" alt="golang">  |  [`GoLang`](https://github.com/yuva19102003/DEVOPS-TOOL/tree/master/go%20lang) |
-| 08. | Ansible | <img align="right" src="https://github.com/yuva19102003/DEVOPS-TOOL/blob/master/logo/ansible-icon.svg" height="100" alt="golang">  |  [`Ansible`](https://github.com/yuva19102003/DEVOPS-TOOL/tree/master/ansible) |
+| 08. | Ansible | <img align="right" src="https://github.com/yuva19102003/DEVOPS-TOOL/blob/master/logo/ansible-icon.svg" height="100" alt="ansible">  |  [`Ansible`](https://github.com/yuva19102003/DEVOPS-TOOL/tree/master/ansible) |
 
 ----
 
