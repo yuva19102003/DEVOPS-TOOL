@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SSH Key Setup Guide</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        code {
+            font-family: monospace;
+        }
+    </style>
+</head>
+<body>
+    <h1>SSH Key Setup Guide</h1>
+    <h2>Step 1: Check for Existing SSH Keys</h2>
+    <p>Ensure you have an existing SSH key pair. Check the <code>~/.ssh</code> directory:</p>
+    <pre><code>ls ~/.ssh</code></pre>
+    <p>Look for files named <code>id_rsa</code> (private key) and <code>id_rsa.pub</code> (public key). If they exist, proceed to step 3. If not, go to step 2.</p>
+    
+    <h2>Step 2: Generate a New SSH Key Pair</h2>
+    <p>If you don't have an SSH key pair, generate one using:</p>
+    <pre><code>ssh-keygen -t rsa -b 4096 -C "your_email@example.com"</code></pre>
+    <p>Follow the prompts to save the key to the default location (<code>~/.ssh/id_rsa</code>) and optionally add a passphrase.</p>
+    
+    <h2>Step 3: Load the SSH Key into the SSH Agent</h2>
+    <p>Ensure the SSH key is loaded into the SSH agent. Start the SSH agent if it is not already running:</p>
+    <pre><code>eval "$(ssh-agent -s)"</code></pre>
+    <p>Add your SSH key to the agent:</p>
+    <pre><code>ssh-add ~/.ssh/id_rsa</code></pre>
+    
+    <h2>Step 4: Copy the SSH Key to the Remote Server</h2>
+    <p>Now you can copy your SSH key to the remote server:</p>
+    <pre><code>ssh-copy-id ubuntu@54.237.154.120</code></pre>
+    
+    <h2>Troubleshooting</h2>
+    <p>If you encounter any issues, make sure the SSH agent is running and has your key loaded by checking the output of:</p>
+    <pre><code>ssh-add -l</code></pre>
+    <p>This command lists the keys currently managed by the SSH agent.</p>
+    
+    <p>If you need further assistance, feel free to ask!</p>
+</body>
+</html>
