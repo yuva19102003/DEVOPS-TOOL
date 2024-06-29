@@ -1,0 +1,7 @@
+---
+# vars file for test
+
+key_name: demo
+vpc_subnet_id: subnet-03db2e14f449a060a
+instance_type: t2.micro
+image_id: ami-04b70fa74e45c3917

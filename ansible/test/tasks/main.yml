@@ -1,0 +1,18 @@
+---
+# tasks file for test
+
+- name: start an instance with a public IP address
+  amazon.aws.ec2_instance:
+    name: "ansible-EC2-instance"
+    key_name: "{{ key_name }}"
+    vpc_subnet_id: "{{ vpc_subnet_id }}"
+    instance_type: "{{ instance_type }}"
+    security_group: default
+    region: us-east-1
+    aws_access_key: "{{ec2_access_key}}"  # From vault as defined
+    aws_secret_key: "{{ec2_secret_key}}"  # From vault as defined      
+    network:
+      ssign_public_ip: true
+    image_id: "{{ image_id }}"
+    tags:
+      Environment: Testing
