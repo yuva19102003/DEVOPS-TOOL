@@ -1,12 +1,8 @@
 ## What is SonarQube? (Quick context)
 
-![Image](https://europe1.discourse-cdn.com/sonarsource/uploads/sonarcommunity/original/2X/9/9930fd354a1f290d3c72518751aad43da3dd0206.png?utm_source=chatgpt.com)
-
-![Image](https://scm.thm.de/sonar/images/embed-doc/images/architecture-integrate.png?utm_source=chatgpt.com)
-
-![Image](https://gofore.com/media/2022/11/sonar_code-quality-metrics_overview_2019-04-1.png?utm_source=chatgpt.com)
-
 **SonarQube** is a **Static Application Security Testing (SAST)** and **code quality** platform.
+
+<img src="./sonarqube.png">
 
 It detects:
 
