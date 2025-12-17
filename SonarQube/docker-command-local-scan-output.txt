@@ -1,0 +1,147 @@
+raiden@raiden:~/freelance-portfolio$ docker run --rm \
+  --network=host \
+  -e SONAR_HOST_URL="http://localhost:9000" \
+  -e SONAR_TOKEN="sqp_ca582011b74934d60cb73eedf0a1e889cc9dc8e1" \
+  -v "$(pwd):/usr/src" \
+  sonarsource/sonar-scanner-cli
+10:07:47.426 INFO  Scanner configuration file: /opt/sonar-scanner/conf/sonar-scanner.properties
+10:07:47.429 INFO  Project root configuration file: /usr/src/sonar-project.properties
+10:07:47.446 INFO  SonarScanner CLI 8.0.1.6346
+10:07:47.450 INFO  Linux 6.14.0-37-generic amd64
+10:07:48.196 INFO  Communicating with SonarQube Community Build 25.12.0.117093
+10:07:48.197 INFO  JRE provisioning: os[linux], arch[x86_64]
+10:07:49.645 INFO  Starting SonarScanner Engine...
+10:07:49.646 INFO  Java 21.0.9 Eclipse Adoptium (64-bit)
+10:07:50.406 INFO  Load global settings
+10:07:50.491 INFO  Load global settings (done) | time=84ms
+10:07:50.494 INFO  Server id: 243B8A4D-AZsrrU7yG3dmPgq9fGQm
+10:07:50.507 INFO  Loading required plugins
+10:07:50.508 INFO  Load plugins index
+10:07:50.523 INFO  Load plugins index (done) | time=15ms
+10:07:50.523 INFO  Load/download plugins
+10:07:50.730 INFO  Load/download plugins (done) | time=207ms
+10:07:50.971 INFO  Process project properties
+10:07:50.983 INFO  Process project properties (done) | time=12ms
+10:07:50.994 INFO  Project key: my-first-project
+10:07:50.994 INFO  Base dir: /usr/src
+10:07:50.994 INFO  Working dir: /tmp/.scannerwork
+10:07:51.011 INFO  Load project settings for component key: 'my-first-project'
+10:07:51.027 INFO  Load project settings for component key: 'my-first-project' (done) | time=17ms
+10:07:51.053 INFO  Load quality profiles
+10:07:51.090 INFO  Load quality profiles (done) | time=37ms
+10:07:51.126 INFO  Load active rules
+10:07:51.384 INFO  Load active rules (done) | time=258ms
+10:07:51.390 INFO  Load analysis cache
+10:07:51.396 INFO  Load analysis cache (404) | time=6ms
+10:07:51.450 INFO  Preprocessing files...
+10:07:53.070 INFO  5 languages detected in 139 preprocessed files (done) | time=1619ms
+10:07:53.070 INFO  97745 files ignored because of inclusion/exclusion patterns
+10:07:53.071 INFO  211 files ignored because of scm ignore settings
+10:07:53.072 INFO  Loading plugins for detected languages
+10:07:53.073 INFO  Load/download plugins
+10:07:53.548 INFO  Load/download plugins (done) | time=475ms
+10:07:53.660 INFO  Load project repositories
+10:07:53.733 INFO  Load project repositories (done) | time=73ms
+10:07:53.753 INFO  Indexing files...
+10:07:53.753 INFO  Project configuration:
+10:07:53.754 INFO    Excluded sources: node_modules/**, dist/**, build/**
+10:07:53.770 INFO  138 files indexed (done) | time=17ms
+10:07:53.771 INFO  Quality profile for css: Sonar way
+10:07:53.771 INFO  Quality profile for js: Sonar way
+10:07:53.772 INFO  Quality profile for json: Sonar way
+10:07:53.772 INFO  Quality profile for ts: Sonar way
+10:07:53.772 INFO  Quality profile for yaml: Sonar way
+10:07:53.772 INFO  ------------- Run sensors on module my-first-project
+10:07:53.799 INFO  Load metrics repository
+10:07:53.816 INFO  Load metrics repository (done) | time=17ms
+10:07:54.009 INFO  Reflections took 42 ms to scan 1 urls, producing 24 keys and 257 values
+10:07:54.104 INFO  Sensor IaC CloudFormation Sensor [iac]
+10:07:54.151 INFO  There are no files to be analyzed for the CloudFormation language
+10:07:54.151 INFO  Sensor IaC CloudFormation Sensor [iac] (done) | time=47ms
+10:07:54.152 INFO  Sensor IaC cfn-lint report Sensor [iac]
+10:07:54.152 INFO  Sensor IaC cfn-lint report Sensor [iac] (done) | time=1ms
+10:07:54.152 INFO  Sensor IaC Kubernetes Sensor [iac]
+10:07:54.219 INFO  There are no files to be analyzed for the Kubernetes language
+10:07:54.219 INFO  Sensor IaC Kubernetes Sensor [iac] (done) | time=66ms
+10:07:54.219 INFO  Sensor IaC hadolint report Sensor [iac]
+10:07:54.219 INFO  Sensor IaC hadolint report Sensor [iac] (done) | time=0ms
+10:07:54.219 INFO  Sensor IaC Azure Resource Manager Sensor [iac]
+10:07:54.223 INFO  There are no files to be analyzed for the Azure Resource Manager language
+10:07:54.223 INFO  Sensor IaC Azure Resource Manager Sensor [iac] (done) | time=5ms
+10:07:54.223 INFO  Sensor Java Config Sensor [iac]
+10:07:54.227 INFO  There are no files to be analyzed for the Java language
+10:07:54.228 INFO  Sensor Java Config Sensor [iac] (done) | time=4ms
+10:07:54.228 INFO  Sensor IaC Docker Sensor [iac]
+10:07:54.229 INFO  There are no files to be analyzed for the Docker language
+10:07:54.229 INFO  Sensor IaC Docker Sensor [iac] (done) | time=2ms
+10:07:54.230 INFO  Sensor HTML [web]
+10:07:54.233 INFO  Sensor HTML [web] (done) | time=3ms
+10:07:54.233 INFO  Sensor JavaScript/TypeScript analysis [javascript]
+10:07:54.413 INFO  Detected os: Linux arch: amd64 alpine: false. Platform: LINUX_X64
+10:07:54.413 INFO  Deploy location /opt/sonar-scanner/.sonar/js/node-runtime, tagetRuntime: /opt/sonar-scanner/.sonar/js/node-runtime/node,  version: /opt/sonar-scanner/.sonar/js/node-runtime/version.txt
+10:07:56.884 INFO  Using embedded Node.js runtime.
+10:07:56.885 INFO  Using Node.js executable: '/opt/sonar-scanner/.sonar/js/node-runtime/node'.
+10:07:58.401 INFO  Memory configuration: OS (15379 MB), Node.js (4288 MB).
+10:07:58.461 INFO  WebSocket client connected on /ws
+10:07:58.463 INFO  Plugin version: [11.7.1.36988]
+10:08:07.293 INFO  Found 1 tsconfig.json file(s): [/usr/src/tsconfig.json]
+10:08:07.293 INFO  107 source files to be analyzed
+10:08:07.294 INFO  Creating TypeScript program
+10:08:07.294 INFO  TypeScript(5.9.3) configuration file /usr/src/tsconfig.json
+10:08:07.294 INFO  Found 2 file(s) not part of any tsconfig.json: they will be analyzed without type information
+10:08:07.294 INFO  107/107 source files have been analyzed
+10:08:07.297 INFO  Hit the cache for 0 out of 107
+10:08:07.298 INFO  Miss the cache for 107 out of 107: ANALYSIS_MODE_INELIGIBLE [107/107]
+10:08:07.298 INFO  Sensor JavaScript/TypeScript analysis [javascript] (done) | time=13065ms
+10:08:07.298 INFO  Sensor JavaScript inside YAML analysis [javascript]
+10:08:07.330 INFO  No input files found for analysis
+10:08:07.331 INFO  Hit the cache for 0 out of 0
+10:08:07.331 INFO  Miss the cache for 0 out of 0
+10:08:07.331 INFO  Sensor JavaScript inside YAML analysis [javascript] (done) | time=33ms
+10:08:07.331 INFO  Sensor CSS Rules [javascript]
+10:08:07.340 INFO  2 source files to be analyzed
+10:08:07.436 INFO  2/2 source files have been analyzed
+10:08:07.436 INFO  Hit the cache for 0 out of 0
+10:08:07.436 INFO  Miss the cache for 0 out of 0
+10:08:07.436 INFO  Sensor CSS Rules [javascript] (done) | time=106ms
+10:08:07.437 INFO  Sensor CSS Metrics [javascript]
+10:08:07.466 INFO  Sensor CSS Metrics [javascript] (done) | time=30ms
+10:08:07.466 INFO  Sensor TextAndSecretsSensor [text]
+10:08:07.474 INFO  Available processors: 8
+10:08:07.474 INFO  Using 8 threads for analysis.
+10:08:07.659 INFO  The property "sonar.tests" is not set. To improve the analysis accuracy, we categorize a file as a test file if any of the following is true:
+  * The filename starts with "test"
+  * The filename contains "test." or "tests."
+  * Any directory in the file path is named: "doc", "docs", "test" or "tests"
+  * Any directory in the file path has a name ending in "test" or "tests"
+
+10:08:07.675 INFO  Start fetching files for the text and secrets analysis
+10:08:07.679 INFO  Using Git CLI to retrieve untracked files
+10:08:07.683 INFO  Retrieving language associated files and files included via "sonar.text.inclusions" that are tracked by git
+10:08:07.684 INFO  Starting the text and secrets analysis
+10:08:07.686 INFO  126 source files to be analyzed for the text and secrets analysis
+10:08:07.878 INFO  126/126 source files have been analyzed for the text and secrets analysis
+10:08:07.881 INFO  1 file is ignored because it is untracked by git
+10:08:07.882 INFO  Sensor TextAndSecretsSensor [text] (done) | time=415ms
+10:08:07.884 INFO  ------------- Run sensors on project
+10:08:07.970 INFO  Sensor Zero Coverage Sensor
+10:08:07.990 INFO  Sensor Zero Coverage Sensor (done) | time=20ms
+10:08:07.990 INFO  ------------- Gather SCA dependencies on project
+10:08:07.993 INFO  Dependency analysis skipped
+10:08:07.996 INFO  SCM Publisher SCM provider for this project is: git
+10:08:07.996 INFO  SCM Publisher 109 source files to be analyzed
+10:08:08.245 INFO  SCM Publisher 109/109 source files have been analyzed (done) | time=248ms
+10:08:08.266 INFO  CPD Executor 4 files had no CPD blocks
+10:08:08.266 INFO  CPD Executor Calculating CPD for 103 files
+10:08:08.323 INFO  CPD Executor CPD calculation finished (done) | time=56ms
+10:08:08.329 INFO  SCM revision ID 'd91456fc8733c8e87338cff6e4e8e598ca080dfa'
+10:08:08.470 INFO  Analysis report generated in 127ms, dir size=1.1 MB
+10:08:08.647 INFO  Analysis report compressed in 176ms, zip size=615.5 kB
+10:08:08.733 INFO  Analysis report uploaded in 85ms
+10:08:08.734 INFO  ANALYSIS SUCCESSFUL, you can find the results at: http://localhost:9000/dashboard?id=my-first-project
+10:08:08.736 INFO  Note that you will be able to access the updated dashboard once the server has processed the submitted analysis report
+10:08:08.738 INFO  More about the report processing at http://localhost:9000/api/ce/task?id=0860a4f5-ffba-4d9d-9506-ffe73ec47c87
+10:08:08.996 INFO  Analysis total time: 18.216 s
+10:08:08.997 INFO  SonarScanner Engine completed successfully
+10:08:09.353 INFO  EXECUTION SUCCESS
+10:08:09.354 INFO  Total time: 21.929s

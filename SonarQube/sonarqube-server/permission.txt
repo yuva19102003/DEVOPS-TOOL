@@ -1,0 +1,9 @@
+Fix permissions:
+
+sudo chown -R 999:999 postgres
+sudo chown -R 1000:1000 sonarqube-data sonarqube-extensions sonarqube-logs
+
+
+If unsure, safe fallback:
+
+sudo chmod -R 777 postgres sonarqube-data sonarqube-extensions sonarqube-logs

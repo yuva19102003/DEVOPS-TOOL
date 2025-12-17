@@ -1,0 +1,5 @@
+# SonarQube Docker volumes
+SonarQube/sonarqube-server/postgres/
+SonarQube/sonarqube-server/sonarqube-data/
+SonarQube/sonarqube-server/sonarqube-extensions/
+SonarQube/sonarqube-server/sonarqube-logs/
