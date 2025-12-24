@@ -1,0 +1,67 @@
+raiden@raiden:~/DEVOPS-TOOL/Packer/packer_docker_tutorial$ touch docker-ubuntu.pkr.hcl
+
+
+raiden@raiden:~/DEVOPS-TOOL/Packer/packer_docker_tutorial$ ls
+docker-ubuntu.pkr.hcl
+
+
+raiden@raiden:~/DEVOPS-TOOL/Packer/packer_docker_tutorial$ packer init .
+Installed plugin github.com/hashicorp/docker v1.1.2 in "/home/raiden/.config/packer/plugins/github.com/hashicorp/docker/packer-plugin-docker_v1.1.2_x5.0_linux_amd64"
+
+
+raiden@raiden:~/DEVOPS-TOOL/Packer/packer_docker_tutorial$ packer fmt .
+docker-ubuntu.pkr.hcl
+
+
+raiden@raiden:~/DEVOPS-TOOL/Packer/packer_docker_tutorial$ packer validate .
+The configuration is valid.
+
+
+raiden@raiden:~/DEVOPS-TOOL/Packer/packer_docker_tutorial$ packer build .
+learn-packer.docker.ubuntu: output will be in this color.
+
+==> learn-packer.docker.ubuntu: Creating a temporary directory for sharing data...
+==> learn-packer.docker.ubuntu: Pulling Docker image: ubuntu:jammy
+==> learn-packer.docker.ubuntu: jammy: Pulling from library/ubuntu
+==> learn-packer.docker.ubuntu: Digest: sha256:104ae83764a5119017b8e8d6218fa0832b09df65aae7d5a6de29a85d813da2fb
+==> learn-packer.docker.ubuntu: Status: Downloaded newer image for ubuntu:jammy
+==> learn-packer.docker.ubuntu: docker.io/library/ubuntu:jammy
+==> learn-packer.docker.ubuntu: Starting docker container...
+==> learn-packer.docker.ubuntu: Run command: docker run -v /home/raiden/.config/packer/tmp2578225440:/packer-files -d -i -t --entrypoint=/bin/sh -- ubuntu:jammy
+==> learn-packer.docker.ubuntu: Container ID: 28162b865f98692659304a2e0b036a7f69d0a006538b1f4f400ac931b11c2c54
+==> learn-packer.docker.ubuntu: Committing the container
+==> learn-packer.docker.ubuntu: Image ID: sha256:ced69820e75f04dc8c7cdfdf80f385a0feef9ebbfab23abaa97457662e03668d
+==> learn-packer.docker.ubuntu: Killing the container: 28162b865f98692659304a2e0b036a7f69d0a006538b1f4f400ac931b11c2c54
+Build 'learn-packer.docker.ubuntu' finished after 5 seconds 674 milliseconds.
+
+==> Wait completed after 5 seconds 674 milliseconds
+
+==> Builds finished. The artifacts of successful builds are:
+--> learn-packer.docker.ubuntu: Imported Docker image: sha256:ced69820e75f04dc8c7cdfdf80f385a0feef9ebbfab23abaa97457662e03668d
+
+
+raiden@raiden:~/DEVOPS-TOOL/Packer/packer_docker_tutorial$ docker images                                                                                                                                                                          i Info →   U  In Use
+IMAGE                                                  ID             DISK USAGE   CONTENT SIZE   EXTRA
+grafana/grafana:latest                                 35c41e0fd029        971MB          204MB        
+grafana/loki:2.9.3                                     eb92f1a43917        101MB         24.6MB        
+grafana/promtail:2.9.3                                 b338a29de45e        285MB         75.1MB        
+hashicorp/vault:1.15                                   0450896c43b1        535MB          139MB        
+mongo:latest                                           7f5bbdafebde       1.26GB          330MB    U   
+nginx:latest                                           553f64aecdc3        225MB         59.8MB        
+nocodb/nocodb:latest                                   8fd57018accf        877MB          209MB        
+postgres:17                                            f337b026cb1f        645MB          167MB        
+postgres:18                                            38d5c9d52203        649MB          168MB        
+prom/prometheus:latest                                 49214755b615        507MB          134MB        
+quay.io/prometheuscommunity/postgres-exporter:latest   fb96c4413985       37.2MB         11.7MB        
+sonarqube:latest                                       4e55d47ba60c        2.3GB         1.01GB        
+sonarsource/sonar-scanner-cli:latest                   97c145e4f8fe       1.45GB          436MB        
+ubuntu:jammy                                           104ae83764a5        119MB         31.5MB        
+
+
+raiden@raiden:~/DEVOPS-TOOL/Packer/packer_docker_tutorial$ docker rmi 104ae83764a5
+Untagged: ubuntu:jammy
+Deleted: sha256:104ae83764a5119017b8e8d6218fa0832b09df65aae7d5a6de29a85d813da2fb
+
+
+raiden@raiden:~/DEVOPS-TOOL/Packer/packer_docker_tutorial$ c
+

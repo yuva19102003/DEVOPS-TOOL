@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning Packer - Multi-Cloud Infrastructure as Code</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+            color: #ffffff;
+            overflow-x: hidden;
+            min-height: 100vh;
+        }
+
+        /* Header Section */
+        header {
+            position: relative;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            perspective: 1000px;
+            overflow: hidden;
+        }
+
+        .background-animation {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1;
+        }
+
+        .cube {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            opacity: 0.1;
+            border: 2px solid #00d4ff;
+            transform-style: preserve-3d;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 10;
+            text-align: center;
+            max-width: 900px;
+            padding: 40px;
+        }
+
+        h1 {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            background: linear-gradient(45deg, #00d4ff, #0099ff, #00ff88);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: fadeInScale 1s ease-out;
+            text-shadow: 0 0 30px rgba(0, 212, 255, 0.3);
+        }
+
+        .subtitle {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+            color: #00d4ff;
+            animation: fadeInUp 1s ease-out 0.3s both;
+            text-shadow: 0 0 20px rgba(0, 212, 255, 0.2);
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 15px 40px;
+            background: linear-gradient(45deg, #00d4ff, #0099ff);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            border: none;
+            margin-top: 30px;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 30px rgba(0, 212, 255, 0.5);
+            animation: fadeInUp 1s ease-out 0.6s both;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 0 50px rgba(0, 212, 255, 0.8);
+        }
+
+        /* Platforms Section */
+        .platforms-section {
+            padding: 80px 20px;
+            background: rgba(48, 43, 99, 0.3);
+            position: relative;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 3rem;
+            margin-bottom: 60px;
+            background: linear-gradient(45deg, #00ff88, #00d4ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .platforms-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .platform-card {
+            background: linear-gradient(135deg, rgba(0, 212, 255, 0.1), rgba(0, 153, 255, 0.1));
+            border: 2px solid rgba(0, 212, 255, 0.3);
+            border-radius: 15px;
+            padding: 30px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            transform-style: preserve-3d;
+        }
+
+        .platform-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(0, 255, 136, 0.3), transparent);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .platform-card:hover {
+            transform: translateY(-10px) rotateX(5deg);
+            box-shadow: 0 20px 40px rgba(0, 212, 255, 0.4);
+            border-color: rgba(0, 212, 255, 0.6);
+        }
+
+        .platform-card:hover::before {
+            opacity: 1;
+        }
+
+        .platform-icon {
+            font-size: 3rem;
+            margin-bottom: 15px;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .platform-name {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: #00ff88;
+        }
+
+        .platform-desc {
+            color: #b0e0ff;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        /* Features Section */
+        .features-section {
+            padding: 80px 20px;
+            background: linear-gradient(135deg, rgba(15, 12, 41, 0.8), rgba(36, 36, 62, 0.8));
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .feature-box {
+            background: rgba(0, 212, 255, 0.05);
+            border-left: 4px solid #00d4ff;
+            padding: 25px;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .feature-box:hover {
+            transform: translateX(10px);
+            background: rgba(0, 212, 255, 0.1);
+            box-shadow: 0 10px 30px rgba(0, 212, 255, 0.2);
+        }
+
+        .feature-title {
+            font-size: 1.3rem;
+            color: #00ff88;
+            margin-bottom: 10px;
+        }
+
+        .feature-text {
+            color: #b0e0ff;
+            line-height: 1.8;
+        }
+
+        /* Animations */
+        @keyframes fadeInScale {
+            from {
+                opacity: 0;
+                transform: scale(0.8);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+
+        @keyframes rotateCube {
+            from {
+                transform: rotateX(0) rotateY(0) rotateZ(0);
+            }
+            to {
+                transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
+            }
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            background: rgba(0, 0, 0, 0.5);
+            color: #00d4ff;
+            border-top: 1px solid rgba(0, 212, 255, 0.3);
+        }
+
+        .particles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .particle {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: #00d4ff;
+            border-radius: 50%;
+            opacity: 0.5;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            .subtitle {
+                font-size: 1.1rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .platforms-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="particles" id="particles"></div>
+
+    <!-- Header Section -->
+    <header>
+        <div class="background-animation">
+            <div class="cube" id="cube1"></div>
+            <div class="cube" id="cube2"></div>
+            <div class="cube" id="cube3"></div>
+        </div>
+
+        <div class="hero-content">
+            <h1>Learning Packer</h1>
+            <p class="subtitle">Multi-Cloud Infrastructure as Code</p>
+            <p style="font-size: 1.1rem; color: #b0e0ff; margin-bottom: 20px;">
+                Master infrastructure automation across AWS, Azure, Digital Ocean, Oracle, Docker, VirtualBox & Ansible
+            </p>
+            <button class="cta-button" onclick="document.querySelector('.platforms-section').scrollIntoView({behavior: 'smooth'})">
+                Explore Platforms
+            </button>
+        </div>
+    </header>
+
+    <!-- Platforms Section -->
+    <section class="platforms-section">
+        <h2 class="section-title">Supported Platforms</h2>
+        <div class="platforms-grid">
+            <div class="platform-card">
+                <div class="platform-icon">☁️</div>
+                <div class="platform-name">AWS</div>
+                <div class="platform-desc">Build and manage AMIs for Amazon Web Services with Packer</div>
+            </div>
+
+            <div class="platform-card">
+                <div class="platform-icon">🔷</div>
+                <div class="platform-name">Azure</div>
+                <div class="platform-desc">Create managed images and VHDs for Microsoft Azure</div>
+            </div>
+
+            <div class="platform-card">
+                <div class="platform-icon">💧</div>
+                <div class="platform-name">Digital Ocean</div>
+                <div class="platform-desc">Build custom snapshots for Digital Ocean droplets</div>
+            </div>
+
+            <div class="platform-card">
+                <div class="platform-icon">🗝️</div>
+                <div class="platform-name">Oracle Cloud</div>
+                <div class="platform-desc">Create custom images for Oracle Cloud Infrastructure</div>
+            </div>
+
+            <div class="platform-card">
+                <div class="platform-icon">🐳</div>
+                <div class="platform-name">Docker</div>
+                <div class="platform-desc">Build Docker images with Packer provisioning</div>
+            </div>
+
+            <div class="platform-card">
+                <div class="platform-icon">📦</div>
+                <div class="platform-name">VirtualBox</div>
+                <div class="platform-desc">Create OVA/OVF files for VirtualBox virtual machines</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section">
+        <h2 class="section-title">Key Features</h2>
+        <div class="features-grid">
+            <div class="feature-box">
+                <div class="feature-title">🚀 Automation</div>
+                <div class="feature-text">Automate image creation across multiple platforms with a single configuration file</div>
+            </div>
+
+            <div class="feature-box">
+                <div class="feature-title">⚙️ Provisioning</div>
+                <div class="feature-text">Integrate Ansible for advanced configuration management and infrastructure setup</div>
+            </div>
+
+            <div class="feature-box">
+                <div class="feature-title">🔄 Consistency</div>
+                <div class="feature-text">Ensure consistent deployments across all cloud providers and infrastructure types</div>
+            </div>
+
+            <div class="feature-box">
+                <div class="feature-title">📝 Infrastructure as Code</div>
+                <div class="feature-text">Version control your infrastructure definitions with JSON or HCL templates</div>
+            </div>
+
+            <div class="feature-box">
+                <div class="feature-title">⚡ Efficiency</div>
+                <div class="feature-text">Reduce manual configuration and deployment time significantly</div>
+            </div>
+
+            <div class="feature-box">
+                <div class="feature-title">🔗 Integration</div>
+                <div class="feature-text">Seamless integration with Terraform and other DevOps tools</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Learning Packer - DevOps Infrastructure Automation</p>
+        <p>Master the art of building reproducible infrastructure</p>
+    </footer>
+
+    <!-- GSAP Animation Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script>
+        // Create floating particles
+        function createParticles() {
+            const container = document.getElementById('particles');
+            for (let i = 0; i < 50; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.top = Math.random() * 100 + '%';
+                container.appendChild(particle);
+
+                // Animate particles
+                gsap.to(particle, {
+                    duration: Math.random() * 20 + 10,
+                    x: Math.random() * 200 - 100,
+                    y: Math.random() * 200 - 100,
+                    opacity: 0,
+                    repeat: -1,
+                    yoyo: true,
+                    ease: 'sine.inOut'
+                });
+            }
+        }
+
+        // Animate cubes in background
+        function animateCubes() {
+            gsap.to('#cube1', {
+                duration: 8,
+                rotationX: 360,
+                rotationY: 360,
+                repeat: -1,
+                ease: 'none'
+            });
+
+            gsap.to('#cube2', {
+                duration: 10,
+                rotationX: -360,
+                rotationZ: 360,
+                repeat: -1,
+                ease: 'none',
+                delay: 1
+            });
+
+            gsap.to('#cube3', {
+                duration: 12,
+                rotationY: -360,
+                rotationZ: -360,
+                repeat: -1,
+                ease: 'none',
+                delay: 2
+            });
+
+            // Position cubes
+            gsap.set(['#cube1', '#cube2', '#cube3'], {
+                perspective: 1000
+            });
+
+            gsap.set('#cube1', { left: '10%', top: '10%' });
+            gsap.set('#cube2', { left: '70%', top: '20%' });
+            gsap.set('#cube3', { right: '10%', bottom: '20%' });
+        }
+
+        // Scroll animations
+        window.addEventListener('scroll', () => {
+            const scrollPercent = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+            document.body.style.background = `linear-gradient(135deg, hsl(${scrollPercent * 2}, 50%, 10%), hsl(${scrollPercent}, 40%, 15%), hsl(${scrollPercent + 20}, 35%, 15%))`;
+        });
+
+        // Parallax effect on platform cards
+        document.querySelectorAll('.platform-card').forEach((card, index) => {
+            card.addEventListener('mousemove', (e) => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                const centerX = rect.width / 2;
+                const centerY = rect.height / 2;
+                const rotateX = (y - centerY) / 10;
+                const rotateY = (centerX - x) / 10;
+
+                gsap.to(card, {
+                    rotationX: rotateX,
+                    rotationY: rotateY,
+                    duration: 0.3,
+                    overwrite: 'auto'
+                });
+            });
+
+            card.addEventListener('mouseleave', () => {
+                gsap.to(card, {
+                    rotationX: 0,
+                    rotationY: 0,
+                    duration: 0.5
+                });
+            });
+        });
+
+        // Initialize animations
+        window.addEventListener('load', () => {
+            createParticles();
+            animateCubes();
+        });
+
+        // Smooth scroll for internal links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

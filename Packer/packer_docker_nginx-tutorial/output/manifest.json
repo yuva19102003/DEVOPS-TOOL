@@ -1,0 +1,14 @@
+{
+  "builds": [
+    {
+      "name": "nginx",
+      "builder_type": "docker",
+      "build_time": 1766560822,
+      "files": null,
+      "artifact_id": "sha256:7716778afcfd3939262cca4b2e4ffcaba88a19e8d41c7f612e28990be7b78b7a",
+      "packer_run_uuid": "cc37711e-395c-bd30-88d6-2b1725eb4e71",
+      "custom_data": null
+    }
+  ],
+  "last_run_uuid": "cc37711e-395c-bd30-88d6-2b1725eb4e71"
+}
