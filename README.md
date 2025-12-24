@@ -23,6 +23,7 @@
 | 9️⃣ | **📦 Node JS** | <img align="center" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" height="80" alt="Nodejs">  |  [📖 View Docs](https://github.com/yuva19102003/DEVOPS-TOOL/tree/master/Nodejs) |
 | 🔟 | **🧪 SonarQube** | <img align="center" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sonarqube/sonarqube-original.svg" height="80" alt="SonarQube">  |  [📖 View Docs](https://github.com/yuva19102003/DEVOPS-TOOL/tree/master/SonarQube) |
 | 1️⃣1️⃣ | **📦 Packer** | <img align="center" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/packer/packer-plain.svg" height="80" alt="Packer">  |  [📖 View Docs](https://github.com/yuva19102003/DEVOPS-TOOL/tree/master/Packer) |
+| 1️⃣2️⃣ | **🐇 RabbitMQ** | <img align="center" src="https://cdn.worldvectorlogo.com/logos/rabbitmq.svg" height="80" alt="RabbitMQ">  |  [📖 View Docs](https://github.com/yuva19102003/DEVOPS-TOOL/tree/master/RabbitMQ) |
 
 
 
@@ -45,6 +46,7 @@ This repository contains comprehensive documentation and resources for various D
 - 📦 **[Node JS](./Nodejs)** - JavaScript runtime
 - 🧪 **[SonarQube](./SonarQube)** - Code quality analysis
 - 📦 **[Packer](./Packer)** - Infrastructure automation
+- 🐇 **[RabbitMQ](./RabbitMQ)** - Messaging broker
 
 ---
 
