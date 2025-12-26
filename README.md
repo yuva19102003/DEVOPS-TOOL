@@ -24,6 +24,7 @@
 | 🔟 | **🧪 SonarQube** | <img align="center" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sonarqube/sonarqube-original.svg" height="80" alt="SonarQube">  |  [📖 View Docs](https://github.com/yuva19102003/DEVOPS-TOOL/tree/master/SonarQube) |
 | 1️⃣1️⃣ | **📦 Packer** | <img align="center" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/packer/packer-plain.svg" height="80" alt="Packer">  |  [📖 View Docs](https://github.com/yuva19102003/DEVOPS-TOOL/tree/master/Packer) |
 | 1️⃣2️⃣ | **🐇 RabbitMQ** | <img align="center" src="https://cdn.worldvectorlogo.com/logos/rabbitmq.svg" height="80" alt="RabbitMQ">  |  [📖 View Docs](https://github.com/yuva19102003/DEVOPS-TOOL/tree/master/RabbitMQ) |
+| 1️⃣3️⃣ | **🔁 GitLab CI** | <img align="center" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/gitlab/gitlab-original.svg" height="80" alt="GitLab CI">  |  [📖 View Docs](https://github.com/yuva19102003/DEVOPS-TOOL/tree/master/GitlabCI) |
 
 
 
@@ -37,6 +38,7 @@ This repository contains comprehensive documentation and resources for various D
 
 - 🐳 **[Docker](./Docker)** - Containerization platform
 - 🔄 **[ArgoCD](./Argocd)** - Continuous deployment tool
+- 🔁 **[GitLab CI](./GitlabCI)** - CI/CD pipelines
 - 🏗️ **[Terraform](./Terrraform)** - Infrastructure as Code
 - 🔨 **[Jenkins](./Jenkins)** - CI/CD automation
 - 📊 **[Prometheus](./prometheus)** - Monitoring and alerting
