@@ -1,0 +1,14 @@
+services:
+  rabbitmq:
+    image: rabbitmq:latest
+    container_name: rabbitmq
+    ports:
+      - "5672:5672"     # AMQP
+      - "15672:15672"   # Management UI
+    command: >
+      sh -c "
+        rabbitmq-plugins enable --offline rabbitmq_management &&
+        rabbitmq-server
+      "
+# username: guest
+# password: guest
