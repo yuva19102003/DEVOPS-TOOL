@@ -25,6 +25,7 @@
 | 1️⃣1️⃣ | **📦 Packer** | <img align="center" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/packer/packer-plain.svg" height="80" alt="Packer">  |  [📖 View Docs](https://github.com/yuva19102003/DEVOPS-TOOL/tree/master/Packer) |
 | 1️⃣2️⃣ | **🐇 RabbitMQ** | <img align="center" src="https://cdn.worldvectorlogo.com/logos/rabbitmq.svg" height="80" alt="RabbitMQ">  |  [📖 View Docs](https://github.com/yuva19102003/DEVOPS-TOOL/tree/master/RabbitMQ) |
 | 1️⃣3️⃣ | **🔁 GitLab CI** | <img align="center" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/gitlab/gitlab-original.svg" height="80" alt="GitLab CI">  |  [📖 View Docs](https://github.com/yuva19102003/DEVOPS-TOOL/tree/master/GitlabCI) |
+| 1️⃣4️⃣ | **🔐 Hashicorp Vault** | <img align="center" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vault/vault-original.svg" height="80" alt="Hashicorp Vault">  |  [📖 View Docs](https://github.com/yuva19102003/DEVOPS-TOOL/tree/master/Hashicorp-Vault) |
 
 
 
@@ -39,6 +40,7 @@ This repository contains comprehensive documentation and resources for various D
 - 🐳 **[Docker](./Docker)** - Containerization platform
 - 🔄 **[ArgoCD](./Argocd)** - Continuous deployment tool
 - 🔁 **[GitLab CI](./GitlabCI)** - CI/CD pipelines
+- 🔐 **[Hashicorp Vault](./Hashicorp-Vault)** - Secrets management
 - 🏗️ **[Terraform](./Terrraform)** - Infrastructure as Code
 - 🔨 **[Jenkins](./Jenkins)** - CI/CD automation
 - 📊 **[Prometheus](./prometheus)** - Monitoring and alerting
