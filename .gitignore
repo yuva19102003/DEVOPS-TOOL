@@ -5,3 +5,4 @@ SonarQube/sonarqube-server/sonarqube-extensions/
 SonarQube/sonarqube-server/sonarqube-logs/
 
 RabbitMQ/node_modules/
+OpenTelemetry/otel-demo/app/node_modules/
