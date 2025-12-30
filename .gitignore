@@ -6,3 +6,6 @@ SonarQube/sonarqube-server/sonarqube-logs/
 
 RabbitMQ/node_modules/
 OpenTelemetry/otel-demo/app/node_modules/
+
+Apache-Airflow/apache-airflow-demo/logs
+Apache-Airflow/apache-airflow-demo/dags/__pycache__

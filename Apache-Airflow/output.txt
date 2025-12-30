@@ -1,0 +1,76 @@
+raiden@raiden:~/DEVOPS-TOOL/Apache-Airflow/apache-airflow-demo$ mkdir -p dags logs plugins
+sudo chown -R 50000:0 .
+[sudo] password for raiden: 
+
+
+raiden@raiden:~/DEVOPS-TOOL/Apache-Airflow/apache-airflow-demo$ docker compose up airflow-init
+WARN[0000] /home/raiden/DEVOPS-TOOL/Apache-Airflow/apache-airflow-demo/docker-compose.yml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion 
+[+] up 55/55
+ ✔ Image postgres:15 Pulled                                                                                                                                                             19.5s 
+ ✔ Image redis:7 Pulled                                                                                                                                                                  6.7s 
+ ✔ Image apache/airflow:2.9.3 Pulled                                                                                                                                                    25.6s 
+ ✔ Network apache-airflow-demo_default Created                                                                                                                                           0.0s 
+ ✔ Volume apache-airflow-demo_postgres-db-volume Created                                                                                                                                 0.0s 
+ ✔ Container apache-airflow-demo-redis-1 Created                                                                                                                                         0.4s 
+ ✔ Container apache-airflow-demo-postgres-1 Created                                                                                                                                      0.4s 
+ ✔ Container apache-airflow-demo-airflow-init-1 Created                                                                                                                                  0.0s 
+Attaching to airflow-init-1
+Container apache-airflow-demo-postgres-1 Waiting 
+Container apache-airflow-demo-redis-1 Waiting 
+Container apache-airflow-demo-redis-1 Healthy 
+Container apache-airflow-demo-postgres-1 Healthy 
+airflow-init-1  | 
+airflow-init-1  | /home/airflow/.local/lib/python3.12/site-packages/airflow/configuration.py:764 FutureWarning: The auth_backends setting in [api] has had airflow.api.auth.backend.session added in the running config, which is needed by the UI. Please update your config before Apache Airflow 3.0.
+airflow-init-1  | DB: postgresql+psycopg2://airflow:***@postgres/airflow
+airflow-init-1  | Performing upgrade to the metadata database postgresql+psycopg2://airflow:***@postgres/airflow
+airflow-init-1  | [2025-12-30T10:27:03.344+0000] {migration.py:215} INFO - Context impl PostgresqlImpl.
+airflow-init-1  | [2025-12-30T10:27:03.345+0000] {migration.py:218} INFO - Will assume transactional DDL.
+airflow-init-1  | [2025-12-30T10:27:03.346+0000] {migration.py:215} INFO - Context impl PostgresqlImpl.
+airflow-init-1  | [2025-12-30T10:27:03.346+0000] {migration.py:218} INFO - Will assume transactional DDL.
+airflow-init-1  | INFO  [alembic.runtime.migration] Context impl PostgresqlImpl.
+airflow-init-1  | INFO  [alembic.runtime.migration] Will assume transactional DDL.
+airflow-init-1  | INFO  [alembic.runtime.migration] Running stamp_revision  -> 686269002441
+airflow-init-1  | Database migrating done!
+airflow-init-1  | /home/airflow/.local/lib/python3.12/site-packages/airflow/configuration.py:764 FutureWarning: The auth_backends setting in [api] has had airflow.api.auth.backend.session added in the running config, which is needed by the UI. Please update your config before Apache Airflow 3.0.
+airflow-init-1  | 
+airflow-init-1  | airflow users create command error: the following arguments are required: -e/--email, -f/--firstname, -l/--lastname, -r/--role, -u/--username, see help above.
+airflow-init-1  | Usage: airflow users create [-h] -e EMAIL -f FIRSTNAME -l LASTNAME
+airflow-init-1  |                             [-p PASSWORD] -r ROLE [--use-random-password] -u
+airflow-init-1  |                             USERNAME [-v]
+airflow-init-1  | 
+airflow-init-1  | Create a user
+airflow-init-1  | 
+airflow-init-1  | Options:
+airflow-init-1  |   -h, --help            show this help message and exit
+airflow-init-1  |   -e, --email EMAIL     Email of the user
+airflow-init-1  |   -f, --firstname FIRSTNAME
+airflow-init-1  |                         First name of the user
+airflow-init-1  |   -l, --lastname LASTNAME
+airflow-init-1  |                         Last name of the user
+airflow-init-1  |   -p, --password PASSWORD
+airflow-init-1  |                         Password of the user, required to create a user without --use-random-password
+airflow-init-1  |   -r, --role ROLE       Role of the user. Existing roles include Admin, User, Op, Viewer, and Public
+airflow-init-1  |   --use-random-password
+airflow-init-1  |                         Do not prompt for password. Use random string instead. Required to create a user without --password
+airflow-init-1  |   -u, --username USERNAME
+airflow-init-1  |                         Username of the user
+airflow-init-1  |   -v, --verbose         Make logging output more verbose
+airflow-init-1  | 
+airflow-init-1  | examples:
+airflow-init-1  | To create an user with "Admin" role and username equals to "admin", run:
+airflow-init-1  | 
+airflow-init-1  |     $ airflow users create \
+airflow-init-1  |           --username admin \
+airflow-init-1  |           --firstname FIRST_NAME \
+airflow-init-1  |           --lastname LAST_NAME \
+airflow-init-1  |           --role Admin \
+airflow-init-1  |           --email admin@example.org
+airflow-init-1  | /bin/bash: line 2: --username: command not found
+airflow-init-1  | /bin/bash: line 3: --password: command not found
+airflow-init-1  | /bin/bash: line 4: --firstname: command not found
+airflow-init-1  | /bin/bash: line 5: --lastname: command not found
+airflow-init-1  | /bin/bash: line 6: --role: command not found
+airflow-init-1  | /bin/bash: line 7: --email: command not found
+airflow-init-1 exited with code 127
+
+
