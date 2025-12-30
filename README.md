@@ -26,7 +26,9 @@
 | 1️⃣2️⃣ | **🐇 RabbitMQ** | <img align="center" src="https://cdn.worldvectorlogo.com/logos/rabbitmq.svg" height="80" alt="RabbitMQ">  |  [📖 View Docs](https://github.com/yuva19102003/DEVOPS-TOOL/tree/master/RabbitMQ) |
 | 1️⃣3️⃣ | **🔁 GitLab CI** | <img align="center" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/gitlab/gitlab-original.svg" height="80" alt="GitLab CI">  |  [📖 View Docs](https://github.com/yuva19102003/DEVOPS-TOOL/tree/master/GitlabCI) |
 | 1️⃣4️⃣ | **🔐 Hashicorp Vault** | <img align="center" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vault/vault-original.svg" height="80" alt="Hashicorp Vault">  |  [📖 View Docs](https://github.com/yuva19102003/DEVOPS-TOOL/tree/master/Hashicorp-Vault) |
-| 1️⃣5️⃣ | **📡 OpenTelemetry** | <img align="center" src="https://opentelemetry.io/img/opentelemetry-logo.svg" height="80" alt="OpenTelemetry">  |  [📖 View Docs](https://github.com/yuva19102003/DEVOPS-TOOL/tree/master/OpenTelemetry) |
+| 1️⃣5️⃣ | **📡 OpenTelemetry** | <img align="center" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/opentelemetry/opentelemetry-original.svg" height="80" alt="OpenTelemetry">  |  [📖 View Docs](https://github.com/yuva19102003/DEVOPS-TOOL/tree/master/OpenTelemetry) |
+| 1️⃣6️⃣ | **🔴 Redis** | <img align="center" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/redis/redis-plain.svg" height="80" alt="Redis">  |  [📖 View Docs](https://github.com/yuva19102003/DEVOPS-TOOL/tree/master/Redis) |
+| 1️⃣7️⃣ | **✈️ Apache Airflow** | <img align="center" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/apacheairflow/apacheairflow-original.svg" height="80" alt="Apache Airflow">  |  [📖 View Docs](https://github.com/yuva19102003/DEVOPS-TOOL/tree/master/Apache-Airflow) |
 
 
 
@@ -53,6 +55,8 @@ This repository contains comprehensive documentation and resources for various D
 - 📦 **[Packer](./Packer)** - Infrastructure automation
 - 🐇 **[RabbitMQ](./RabbitMQ)** - Messaging broker
 - 📡 **[OpenTelemetry](./OpenTelemetry)** - Observability and tracing
+- 🔴 **[Redis](./Redis)** - In-memory data store
+- 🌀 **[Apache Airflow](./Apache-Airflow)** - Workflow orchestration
 ---
 
 
