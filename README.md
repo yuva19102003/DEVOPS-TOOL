@@ -29,6 +29,7 @@
 | 1️⃣5️⃣ | **📡 OpenTelemetry** | <img align="center" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/opentelemetry/opentelemetry-original.svg" height="80" alt="OpenTelemetry">  |  [📖 View Docs](https://github.com/yuva19102003/DEVOPS-TOOL/tree/master/OpenTelemetry) |
 | 1️⃣6️⃣ | **🔴 Redis** | <img align="center" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/redis/redis-plain.svg" height="80" alt="Redis">  |  [📖 View Docs](https://github.com/yuva19102003/DEVOPS-TOOL/tree/master/Redis) |
 | 1️⃣7️⃣ | **✈️ Apache Airflow** | <img align="center" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/apacheairflow/apacheairflow-original.svg" height="80" alt="Apache Airflow">  |  [📖 View Docs](https://github.com/yuva19102003/DEVOPS-TOOL/tree/master/Apache-Airflow) |
+| 1️⃣8️⃣ | **☕ Apache Kafka** | <img align="center" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/apachekafka/apachekafka-original.svg" height="80" alt="Apache Kafka">  |  [📖 View Docs](https://github.com/yuva19102003/DEVOPS-TOOL/tree/master/Apache-Kafka) |
 
 
 
@@ -57,6 +58,7 @@ This repository contains comprehensive documentation and resources for various D
 - 📡 **[OpenTelemetry](./OpenTelemetry)** - Observability and tracing
 - 🔴 **[Redis](./Redis)** - In-memory data store
 - 🌀 **[Apache Airflow](./Apache-Airflow)** - Workflow orchestration
+- 🧱 **[Apache Kafka](./Apache-Kafka)** - Distributed streaming platform
 ---
 
 
