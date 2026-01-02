@@ -1,0 +1,30 @@
+raiden@raiden:~/DEVOPS-TOOL/Consul$ docker exec consul-server consul kv put app/env production
+Success! Data written to: app/env
+raiden@raiden:~/DEVOPS-TOOL/Consul$ docker exec consul-server consul kv put app/env port=8000
+Success! Data written to: app/env
+raiden@raiden:~/DEVOPS-TOOL/Consul$ docker exec consul-server consul kv put app/feature/login true
+Success! Data written to: app/feature/login
+raiden@raiden:~/DEVOPS-TOOL/Consul$ docker exec consul-server consul kv get app/env
+port=8000
+raiden@raiden:~/DEVOPS-TOOL/Consul$ docker exec consul-server consul watch \
+  -type=key -key=app/env
+{
+    "Key": "app/env",
+    "CreateIndex": 170,
+    "ModifyIndex": 174,
+    "LockIndex": 0,
+    "Flags": 0,
+    "Value": "cG9ydD04MDAw",
+    "Session": ""
+}
+raiden@raiden:~/DEVOPS-TOOL/Consul$ docker exec consul-server consul watch   -type=key -key=app/env
+{
+    "Key": "app/env",
+    "CreateIndex": 170,
+    "ModifyIndex": 187,
+    "LockIndex": 0,
+    "Flags": 0,
+    "Value": "c3RhZ2luZw==",
+    "Session": ""
+}
+raiden@raiden:~/DEVOPS-TOOL/Consul$

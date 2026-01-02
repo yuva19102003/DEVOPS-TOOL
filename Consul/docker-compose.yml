@@ -1,0 +1,36 @@
+version: "3.9"
+
+networks:
+  consul-net:
+
+services:
+  consul-server:
+    image: hashicorp/consul:1.17
+    container_name: consul-server
+    command: >
+      agent
+      -server
+      -bootstrap-expect=1
+      -client=0.0.0.0
+      -bind=0.0.0.0
+      -ui
+      -config-dir=/consul/config
+    volumes:
+      - ./consul-config:/consul/config
+    ports:
+      - "8500:8500"
+    networks:
+      - consul-net
+
+  consul-client:
+    image: hashicorp/consul:1.17
+    container_name: consul-client
+    depends_on:
+      - consul-server
+    command: >
+      agent
+      -retry-join=consul-server
+      -client=0.0.0.0
+      -bind=0.0.0.0
+    networks:
+      - consul-net

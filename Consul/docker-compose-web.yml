@@ -1,0 +1,13 @@
+version: "3.9"
+
+services:
+  web:
+    image: nginx
+    container_name: web
+    ports:
+      - "80:80"
+    networks:
+      - consul-net
+
+networks:
+  consul-net:

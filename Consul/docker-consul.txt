@@ -1,0 +1,244 @@
+raiden@raiden:~/DEVOPS-TOOL/Consul$ docker compose up
+WARN[0000] /home/raiden/DEVOPS-TOOL/Consul/docker-compose.yml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion 
+[+] up 3/3
+ ✔ Network consul_consul-net Created                                                                                                                                                            0.0s 
+ ✔ Container consul-server   Created                                                                                                                                                            0.0s 
+ ✔ Container consul-client   Created                                                                                                                                                            0.0s 
+Attaching to consul-client, consul-server
+consul-server  | ==> Starting Consul agent...
+consul-server  |                Version: '1.17.3'
+consul-server  |             Build Date: '2024-02-13 18:30:29 +0000 UTC'
+consul-server  |                Node ID: '798ad473-c7cc-37b0-f2a7-ba7020a2b5c6'
+consul-server  |              Node name: '0e49ca9a2b82'
+consul-server  |             Datacenter: 'dc1' (Segment: '<all>')
+consul-server  |                 Server: true (Bootstrap: false)
+consul-server  |            Client Addr: [0.0.0.0] (HTTP: 8500, HTTPS: -1, gRPC: 8502, gRPC-TLS: 8503, DNS: 8600)
+consul-server  |           Cluster Addr: 172.18.0.2 (LAN: 8301, WAN: 8302)
+consul-server  |      Gossip Encryption: false
+consul-server  |       Auto-Encrypt-TLS: false
+consul-server  |            ACL Enabled: false
+consul-server  |      Reporting Enabled: false
+consul-server  |     ACL Default Policy: allow
+consul-server  |              HTTPS TLS: Verify Incoming: false, Verify Outgoing: false, Min Version: TLSv1_2
+consul-server  |               gRPC TLS: Verify Incoming: false, Min Version: TLSv1_2
+consul-server  |       Internal RPC TLS: Verify Incoming: false, Verify Outgoing: false (Verify Hostname: false), Min Version: TLSv1_2
+consul-server  | 
+consul-server  | ==> Log data will now stream in as it occurs:
+consul-server  | 
+consul-server  | 2026-01-02T12:00:10.439Z [DEBUG] agent.grpc.balancer: switching server: target=consul://dc1.798ad473-c7cc-37b0-f2a7-ba7020a2b5c6/server.dc1 from=<none> to=<none>
+consul-server  | 2026-01-02T12:00:10.445Z [INFO]  agent.server.raft: initial configuration: index=1 servers="[{Suffrage:Voter ID:798ad473-c7cc-37b0-f2a7-ba7020a2b5c6 Address:172.18.0.2:8300}]"
+consul-server  | 2026-01-02T12:00:10.445Z [INFO]  agent.server.raft: entering follower state: follower="Node at 172.18.0.2:8300 [Follower]" leader-address= leader-id=
+consul-server  | 2026-01-02T12:00:10.445Z [INFO]  agent.server.serf.wan: serf: EventMemberJoin: 0e49ca9a2b82.dc1 172.18.0.2
+consul-server  | 2026-01-02T12:00:10.446Z [INFO]  agent.server.serf.lan: serf: EventMemberJoin: 0e49ca9a2b82 172.18.0.2
+consul-server  | 2026-01-02T12:00:10.446Z [INFO]  agent.router: Initializing LAN area manager
+consul-server  | 2026-01-02T12:00:10.446Z [DEBUG] agent.grpc.balancer: switching server: target=consul://dc1.798ad473-c7cc-37b0-f2a7-ba7020a2b5c6/server.dc1 from=<none> to=dc1-172.18.0.2:8300
+consul-server  | 2026-01-02T12:00:10.446Z [INFO]  agent.server: Handled event for server in area: event=member-join server=0e49ca9a2b82.dc1 area=wan
+consul-server  | 2026-01-02T12:00:10.446Z [INFO]  agent.server: Adding LAN server: server="0e49ca9a2b82 (Addr: tcp/172.18.0.2:8300) (DC: dc1)"
+consul-server  | 2026-01-02T12:00:10.448Z [INFO]  agent.server.autopilot: reconciliation now disabled
+consul-server  | 2026-01-02T12:00:10.449Z [INFO]  agent.server.cert-manager: initialized server certificate management
+consul-server  | 2026-01-02T12:00:10.449Z [INFO]  agent: Started DNS server: address=0.0.0.0:8600 network=udp
+consul-server  | 2026-01-02T12:00:10.449Z [DEBUG] agent.server.autopilot: autopilot is now running
+consul-server  | 2026-01-02T12:00:10.449Z [DEBUG] agent.server.autopilot: state update routine is now running
+consul-server  | 2026-01-02T12:00:10.449Z [DEBUG] agent.hcp_manager: HCP manager starting
+consul-server  | 2026-01-02T12:00:10.449Z [INFO]  agent: Started DNS server: address=0.0.0.0:8600 network=tcp
+consul-server  | 2026-01-02T12:00:10.450Z [INFO]  agent.http: Registered resource endpoint: endpoint=/api/mesh/v2beta1/computedroutes
+consul-server  | 2026-01-02T12:00:10.450Z [INFO]  agent.http: Registered resource endpoint: endpoint=/api/catalog/v2beta1/serviceendpoints
+consul-server  | 2026-01-02T12:00:10.450Z [INFO]  agent.http: Registered resource endpoint: endpoint=/api/catalog/v2beta1/healthstatus
+consul-server  | 2026-01-02T12:00:10.450Z [INFO]  agent.http: Registered resource endpoint: endpoint=/api/demo/v1/executive
+consul-server  | 2026-01-02T12:00:10.450Z [INFO]  agent.http: Registered resource endpoint: endpoint=/api/mesh/v2beta1/computedexplicitdestinations
+consul-server  | 2026-01-02T12:00:10.450Z [INFO]  agent.http: Registered resource endpoint: endpoint=/api/mesh/v2beta1/tcproute
+consul-server  | 2026-01-02T12:00:10.450Z [INFO]  agent.http: Registered resource endpoint: endpoint=/api/auth/v2beta1/workloadidentity
+consul-server  | 2026-01-02T12:00:10.450Z [INFO]  agent.http: Registered resource endpoint: endpoint=/api/demo/v2/artist
+consul-server  | 2026-01-02T12:00:10.450Z [INFO]  agent.http: Registered resource endpoint: endpoint=/api/mesh/v2beta1/grpcroute
+consul-server  | 2026-01-02T12:00:10.450Z [INFO]  agent.http: Registered resource endpoint: endpoint=/api/catalog/v2beta1/workload
+consul-server  | 2026-01-02T12:00:10.450Z [INFO]  agent.http: Registered resource endpoint: endpoint=/api/tenancy/v1alpha1/namespace
+consul-server  | 2026-01-02T12:00:10.450Z [INFO]  agent.http: Registered resource endpoint: endpoint=/api/mesh/v2beta1/proxyconfiguration
+consul-server  | 2026-01-02T12:00:10.450Z [INFO]  agent.http: Registered resource endpoint: endpoint=/api/mesh/v2beta1/destinations
+consul-server  | 2026-01-02T12:00:10.450Z [INFO]  agent.http: Registered resource endpoint: endpoint=/api/catalog/v2beta1/service
+consul-server  | 2026-01-02T12:00:10.450Z [INFO]  agent.http: Registered resource endpoint: endpoint=/api/auth/v2beta1/trafficpermissions
+consul-server  | 2026-01-02T12:00:10.450Z [INFO]  agent.http: Registered resource endpoint: endpoint=/api/demo/v1/album
+consul-server  | 2026-01-02T12:00:10.450Z [INFO]  agent.http: Registered resource endpoint: endpoint=/api/demo/v2/album
+consul-server  | 2026-01-02T12:00:10.450Z [INFO]  agent.http: Registered resource endpoint: endpoint=/api/mesh/v2beta1/computedproxyconfiguration
+consul-server  | 2026-01-02T12:00:10.450Z [INFO]  agent.http: Registered resource endpoint: endpoint=/api/catalog/v2beta1/failoverpolicy
+consul-server  | 2026-01-02T12:00:10.450Z [INFO]  agent.http: Registered resource endpoint: endpoint=/api/auth/v2beta1/computedtrafficpermissions
+consul-server  | 2026-01-02T12:00:10.450Z [INFO]  agent.http: Registered resource endpoint: endpoint=/api/internal/v1/tombstone
+consul-server  | 2026-01-02T12:00:10.450Z [INFO]  agent.http: Registered resource endpoint: endpoint=/api/demo/v1/artist
+consul-server  | 2026-01-02T12:00:10.450Z [INFO]  agent.http: Registered resource endpoint: endpoint=/api/demo/v1/concept
+consul-server  | 2026-01-02T12:00:10.450Z [INFO]  agent.http: Registered resource endpoint: endpoint=/api/demo/v1/recordlabel
+consul-server  | 2026-01-02T12:00:10.450Z [INFO]  agent.http: Registered resource endpoint: endpoint=/api/mesh/v2beta1/proxystatetemplate
+consul-server  | 2026-01-02T12:00:10.450Z [INFO]  agent.http: Registered resource endpoint: endpoint=/api/mesh/v2beta1/httproute
+consul-server  | 2026-01-02T12:00:10.450Z [INFO]  agent.http: Registered resource endpoint: endpoint=/api/mesh/v2beta1/destinationpolicy
+consul-server  | 2026-01-02T12:00:10.450Z [INFO]  agent.http: Registered resource endpoint: endpoint=/api/catalog/v2beta1/node
+consul-server  | 2026-01-02T12:00:10.450Z [INFO]  agent: Starting server: address=[::]:8500 network=tcp protocol=http
+consul-server  | 2026-01-02T12:00:10.450Z [INFO]  agent: Started gRPC listeners: port_name=grpc address=[::]:8502 network=tcp
+consul-server  | 2026-01-02T12:00:10.450Z [INFO]  agent: started state syncer
+consul-server  | 2026-01-02T12:00:10.450Z [INFO]  agent: Consul agent running!
+consul-server  | 2026-01-02T12:00:10.450Z [INFO]  agent: Started gRPC listeners: port_name=grpc_tls address=[::]:8503 network=tcp
+consul-server  | 2026-01-02T12:00:10.494Z [WARN]  agent.server.raft: heartbeat timeout reached, starting election: last-leader-addr= last-leader-id=
+consul-server  | 2026-01-02T12:00:10.494Z [INFO]  agent.server.raft: entering candidate state: node="Node at 172.18.0.2:8300 [Candidate]" term=2
+consul-server  | 2026-01-02T12:00:10.494Z [DEBUG] agent.server.raft: voting for self: term=2 id=798ad473-c7cc-37b0-f2a7-ba7020a2b5c6
+consul-server  | 2026-01-02T12:00:10.494Z [DEBUG] agent.server.raft: calculated votes needed: needed=1 term=2
+consul-server  | 2026-01-02T12:00:10.494Z [DEBUG] agent.server.raft: vote granted: from=798ad473-c7cc-37b0-f2a7-ba7020a2b5c6 term=2 tally=1
+consul-server  | 2026-01-02T12:00:10.494Z [INFO]  agent.server.raft: election won: term=2 tally=1
+consul-server  | 2026-01-02T12:00:10.494Z [INFO]  agent.server.raft: entering leader state: leader="Node at 172.18.0.2:8300 [Leader]"
+consul-server  | 2026-01-02T12:00:10.494Z [DEBUG] agent.hcp_manager: HCP triggering status update
+consul-server  | 2026-01-02T12:00:10.494Z [INFO]  agent.server: cluster leadership acquired
+consul-server  | 2026-01-02T12:00:10.496Z [INFO]  agent.server.autopilot: reconciliation now enabled
+consul-server  | 2026-01-02T12:00:10.496Z [INFO]  agent.leader: started routine: routine="federation state anti-entropy"
+consul-server  | 2026-01-02T12:00:10.496Z [INFO]  agent.leader: started routine: routine="federation state pruning"
+consul-server  | 2026-01-02T12:00:10.496Z [INFO]  agent.leader: started routine: routine="streaming peering resources"
+consul-server  | 2026-01-02T12:00:10.496Z [INFO]  agent.leader: started routine: routine="metrics for streaming peering resources"
+consul-server  | 2026-01-02T12:00:10.496Z [INFO]  agent.leader: started routine: routine="peering deferred deletion"
+consul-server  | 2026-01-02T12:00:10.496Z [INFO]  agent.server: New leader elected: payload=0e49ca9a2b82
+consul-server  | 2026-01-02T12:00:10.496Z [DEBUG] agent.controller-runtime: controller running: managed_type=internal.v1.Tombstone
+consul-server  | 2026-01-02T12:00:10.496Z [DEBUG] agent.controller-runtime: controller running: managed_type=demo.v2.Artist
+consul-server  | 2026-01-02T12:00:10.496Z [DEBUG] connect.ca.consul: consul CA provider configured: id=fb:50:9b:45:1a:65:15:c1:68:57:73:5f:da:cd:b8:0d:0f:e2:26:eb:68:66:43:11:85:9d:67:a9:7a:56:9c:b9 is_primary=true
+consul-server  | 2026-01-02T12:00:10.497Z [INFO]  connect.ca: updated root certificates from primary datacenter
+consul-server  | 2026-01-02T12:00:10.497Z [INFO]  connect.ca: initialized primary datacenter CA with provider: provider=consul
+consul-server  | 2026-01-02T12:00:10.497Z [INFO]  agent.leader: started routine: routine="intermediate cert renew watch"
+consul-server  | 2026-01-02T12:00:10.497Z [INFO]  agent.leader: started routine: routine="CA root pruning"
+consul-server  | 2026-01-02T12:00:10.497Z [INFO]  agent.leader: started routine: routine="CA root expiration metric"
+consul-server  | 2026-01-02T12:00:10.497Z [INFO]  agent.leader: started routine: routine="CA signing expiration metric"
+consul-server  | 2026-01-02T12:00:10.497Z [INFO]  agent.leader: started routine: routine="virtual IP version check"
+consul-server  | 2026-01-02T12:00:10.497Z [INFO]  agent.leader: started routine: routine="config entry controllers"
+consul-server  | 2026-01-02T12:00:10.497Z [DEBUG] agent.server: successfully established leadership: duration=3.177384ms
+consul-server  | 2026-01-02T12:00:10.500Z [INFO]  agent.server: member joined, marking health alive: member=0e49ca9a2b82 partition=default
+consul-server  | 2026-01-02T12:00:10.502Z [DEBUG] agent.server.xds_capacity_controller: updating drain rate limit: rate_limit=1
+consul-server  | 2026-01-02T12:00:10.502Z [INFO]  agent.leader: stopping routine: routine="virtual IP version check"
+consul-server  | 2026-01-02T12:00:10.502Z [INFO]  agent.leader: stopped routine: routine="virtual IP version check"
+consul-client  | ==> Starting Consul agent...
+consul-client  |                Version: '1.17.3'
+consul-client  |             Build Date: '2024-02-13 18:30:29 +0000 UTC'
+consul-client  |                Node ID: 'e54b7129-eb66-018b-24c6-aa03eb388424'
+consul-client  |              Node name: '6eb77fd076b3'
+consul-client  |             Datacenter: 'dc1' (Segment: '')
+consul-client  |                 Server: false (Bootstrap: false)
+consul-client  |            Client Addr: [0.0.0.0] (HTTP: 8500, HTTPS: -1, gRPC: -1, gRPC-TLS: -1, DNS: 8600)
+consul-client  |           Cluster Addr: 172.18.0.3 (LAN: 8301, WAN: 8302)
+consul-client  |      Gossip Encryption: false
+consul-client  |       Auto-Encrypt-TLS: false
+consul-client  |            ACL Enabled: false
+consul-client  |     ACL Default Policy: allow
+consul-client  |              HTTPS TLS: Verify Incoming: false, Verify Outgoing: false, Min Version: TLSv1_2
+consul-client  |               gRPC TLS: Verify Incoming: false, Min Version: TLSv1_2
+consul-client  |       Internal RPC TLS: Verify Incoming: false, Verify Outgoing: false (Verify Hostname: false), Min Version: TLSv1_2
+consul-client  | 
+consul-client  | ==> Log data will now stream in as it occurs:
+consul-client  | 
+consul-client  | 2026-01-02T12:00:10.605Z [INFO]  agent.client.serf.lan: serf: EventMemberJoin: 6eb77fd076b3 172.18.0.3
+consul-client  | 2026-01-02T12:00:10.605Z [INFO]  agent.router: Initializing LAN area manager
+consul-client  | 2026-01-02T12:00:10.606Z [INFO]  agent: Started DNS server: address=0.0.0.0:8600 network=tcp
+consul-client  | 2026-01-02T12:00:10.606Z [INFO]  agent: Started DNS server: address=0.0.0.0:8600 network=udp
+consul-client  | 2026-01-02T12:00:10.606Z [INFO]  agent.http: Registered resource endpoint: endpoint=/api/mesh/v2beta1/computedroutes
+consul-client  | 2026-01-02T12:00:10.606Z [INFO]  agent.http: Registered resource endpoint: endpoint=/api/catalog/v2beta1/healthstatus
+
+consul-server  | 2026-01-02T12:00:10.608Z [DEBUG] agent.server.memberlist.lan: memberlist: Stream connection from=172.18.0.3:53438
+consul-client  | 2026-01-02T12:00:10.606Z [INFO]  agent.http: Registered resource endpoint: endpoint=/api/auth/v2beta1/workloadidentity
+consul-server  | 2026-01-02T12:00:10.609Z [INFO]  agent.server.serf.lan: serf: EventMemberJoin: 6eb77fd076b3 172.18.0.3
+consul-server  | 2026-01-02T12:00:10.609Z [INFO]  agent.server: member joined, marking health alive: member=6eb77fd076b3 partition=default
+
+
+consul-client  | 2026-01-02T12:00:10.606Z [INFO]  agent.http: Registered resource endpoint: endpoint=/api/demo/v1/executive
+consul-client  | 2026-01-02T12:00:10.606Z [INFO]  agent.http: Registered resource endpoint: endpoint=/api/demo/v1/recordlabel
+consul-client  | 2026-01-02T12:00:10.606Z [INFO]  agent.http: Registered resource endpoint: endpoint=/api/demo/v1/concept
+consul-client  | 2026-01-02T12:00:10.606Z [INFO]  agent.http: Registered resource endpoint: endpoint=/api/mesh/v2beta1/proxystatetemplate
+consul-client  | 2026-01-02T12:00:10.607Z [INFO]  agent.http: Registered resource endpoint: endpoint=/api/mesh/v2beta1/grpcroute
+consul-client  | 2026-01-02T12:00:10.607Z [INFO]  agent.http: Registered resource endpoint: endpoint=/api/demo/v2/album
+consul-client  | 2026-01-02T12:00:10.607Z [INFO]  agent.http: Registered resource endpoint: endpoint=/api/mesh/v2beta1/destinationpolicy
+consul-client  | 2026-01-02T12:00:10.607Z [INFO]  agent.http: Registered resource endpoint: endpoint=/api/catalog/v2beta1/workload
+consul-client  | 2026-01-02T12:00:10.607Z [INFO]  agent.http: Registered resource endpoint: endpoint=/api/internal/v1/tombstone
+consul-client  | 2026-01-02T12:00:10.607Z [INFO]  agent.http: Registered resource endpoint: endpoint=/api/demo/v2/artist
+consul-client  | 2026-01-02T12:00:10.607Z [INFO]  agent.http: Registered resource endpoint: endpoint=/api/mesh/v2beta1/computedexplicitdestinations
+consul-client  | 2026-01-02T12:00:10.607Z [INFO]  agent.http: Registered resource endpoint: endpoint=/api/catalog/v2beta1/serviceendpoints
+consul-client  | 2026-01-02T12:00:10.607Z [INFO]  agent.http: Registered resource endpoint: endpoint=/api/mesh/v2beta1/computedproxyconfiguration
+consul-client  | 2026-01-02T12:00:10.607Z [INFO]  agent.http: Registered resource endpoint: endpoint=/api/catalog/v2beta1/service
+consul-client  | 2026-01-02T12:00:10.607Z [INFO]  agent.http: Registered resource endpoint: endpoint=/api/catalog/v2beta1/node
+consul-client  | 2026-01-02T12:00:10.607Z [INFO]  agent.http: Registered resource endpoint: endpoint=/api/auth/v2beta1/trafficpermissions
+consul-client  | 2026-01-02T12:00:10.607Z [INFO]  agent.http: Registered resource endpoint: endpoint=/api/auth/v2beta1/computedtrafficpermissions
+consul-client  | 2026-01-02T12:00:10.607Z [INFO]  agent.http: Registered resource endpoint: endpoint=/api/demo/v1/artist
+consul-client  | 2026-01-02T12:00:10.607Z [INFO]  agent.http: Registered resource endpoint: endpoint=/api/demo/v1/album
+consul-client  | 2026-01-02T12:00:10.607Z [INFO]  agent.http: Registered resource endpoint: endpoint=/api/mesh/v2beta1/proxyconfiguration
+consul-client  | 2026-01-02T12:00:10.607Z [INFO]  agent.http: Registered resource endpoint: endpoint=/api/mesh/v2beta1/httproute
+consul-client  | 2026-01-02T12:00:10.607Z [INFO]  agent.http: Registered resource endpoint: endpoint=/api/tenancy/v1alpha1/namespace
+consul-client  | 2026-01-02T12:00:10.607Z [INFO]  agent.http: Registered resource endpoint: endpoint=/api/mesh/v2beta1/destinations
+consul-client  | 2026-01-02T12:00:10.607Z [INFO]  agent.http: Registered resource endpoint: endpoint=/api/mesh/v2beta1/tcproute
+consul-client  | 2026-01-02T12:00:10.607Z [INFO]  agent.http: Registered resource endpoint: endpoint=/api/catalog/v2beta1/failoverpolicy
+consul-client  | 2026-01-02T12:00:10.607Z [INFO]  agent: Starting server: address=[::]:8500 network=tcp protocol=http
+consul-client  | 2026-01-02T12:00:10.607Z [INFO]  agent: started state syncer
+consul-client  | 2026-01-02T12:00:10.607Z [INFO]  agent: Consul agent running!
+consul-client  | 2026-01-02T12:00:10.607Z [INFO]  agent: Retry join is supported for the following discovery methods: cluster=LAN discovery_methods="aliyun aws azure digitalocean gce hcp k8s linode mdns os packet scaleway softlayer tencentcloud triton vsphere"
+consul-client  | 2026-01-02T12:00:10.607Z [INFO]  agent: Joining cluster...: cluster=LAN
+consul-client  | 2026-01-02T12:00:10.607Z [INFO]  agent: (LAN) joining: lan_addresses=["consul-server"]
+consul-client  | 2026-01-02T12:00:10.608Z [WARN]  agent.router.manager: No servers available
+consul-client  | 2026-01-02T12:00:10.608Z [ERROR] agent.anti_entropy: failed to sync remote state: error="No known Consul servers"
+consul-client  | 2026-01-02T12:00:10.610Z [INFO]  agent.client.serf.lan: serf: EventMemberJoin: 0e49ca9a2b82 172.18.0.2
+consul-client  | 2026-01-02T12:00:10.610Z [INFO]  agent: (LAN) joined: number_of_nodes=1
+consul-client  | 2026-01-02T12:00:10.610Z [INFO]  agent: Join cluster completed. Synced with initial agents: cluster=LAN num_agents=1
+consul-client  | 2026-01-02T12:00:10.610Z [INFO]  agent.client: adding server: server="0e49ca9a2b82 (Addr: tcp/172.18.0.2:8300) (DC: dc1)"
+consul-server  | 2026-01-02T12:00:10.747Z [DEBUG] agent.server.serf.lan: serf: messageJoinType: 6eb77fd076b3
+consul-server  | 2026-01-02T12:00:10.776Z [DEBUG] agent.server.cert-manager: got cache update event: correlationID=leaf error=<nil>
+consul-server  | 2026-01-02T12:00:10.776Z [DEBUG] agent.server.cert-manager: leaf certificate watch fired - updating auto TLS certificate: uri=spiffe://5d8df15f-53d7-8754-9937-a50de0997417.consul/agent/server/dc/dc1
+consul-server  | 2026-01-02T12:00:10.790Z [DEBUG] agent: Skipping remote check since it is managed automatically: check=serfHealth
+consul-server  | 2026-01-02T12:00:10.790Z [INFO]  agent: Synced node info
+consul-server  | 2026-01-02T12:00:10.806Z [DEBUG] agent.server.serf.lan: serf: messageJoinType: 6eb77fd076b3
+consul-server  | 2026-01-02T12:00:10.935Z [INFO]  agent.server: federation state anti-entropy synced
+consul-server  | 2026-01-02T12:00:10.947Z [DEBUG] agent.server.serf.lan: serf: messageJoinType: 6eb77fd076b3
+consul-server  | 2026-01-02T12:00:11.006Z [DEBUG] agent.server.serf.lan: serf: messageJoinType: 6eb77fd076b3
+consul-server  | 2026-01-02T12:00:11.257Z [DEBUG] agent: Skipping remote check since it is managed automatically: check=serfHealth
+consul-server  | 2026-01-02T12:00:11.257Z [DEBUG] agent: Node info in sync
+consul-server  | 2026-01-02T12:00:11.257Z [DEBUG] agent: Node info in sync
+consul-server  | 2026-01-02T12:00:11.449Z [DEBUG] agent.server.cert-manager: CA config watch fired - updating auto TLS server name: name=server.dc1.peering.5d8df15f-53d7-8754-9937-a50de0997417.consul
+consul-client  | 2026-01-02T12:00:13.322Z [INFO]  agent: Synced node info
+consul-client  | 2026-01-02T12:00:25.479Z [INFO]  agent: Newer Consul version available: new_version=1.22.2 current_version=1.17.3
+consul-server  | 2026-01-02T12:00:26.252Z [DEBUG] agent.http: Request finished: method=GET url=/v1/agent/members?segment=_all from=127.0.0.1:34946 latency="94.42µs"
+consul-server  | 2026-01-02T12:01:05.407Z [DEBUG] agent.server.memberlist.lan: memberlist: Initiating push/pull sync with: 6eb77fd076b3 172.18.0.3:8301
+consul-server  | 2026-01-02T12:01:09.012Z [DEBUG] agent.server.memberlist.lan: memberlist: Stream connection from=172.18.0.3:44056
+consul-server  | 2026-01-02T12:01:35.408Z [DEBUG] agent.server.memberlist.lan: memberlist: Initiating push/pull sync with: 6eb77fd076b3 172.18.0.3:8301
+consul-server  | 2026-01-02T12:01:39.013Z [DEBUG] agent.server.memberlist.lan: memberlist: Stream connection from=172.18.0.3:51168
+consul-server  | 2026-01-02T12:01:53.505Z [DEBUG] agent.http: Request finished: method=GET url="/v1/catalog/connect/consul?dc=dc1&merge-central-config&index=14" from=172.18.0.1:34664 latency="757.934µs"
+consul-server  | 2026-01-02T12:01:53.510Z [DEBUG] agent.http: Request finished: method=GET url="/v1/health/service/consul?dc=dc1&merge-central-config&index=14" from=172.18.0.1:34664 latency="819.387µs"
+consul-server  | 2026-01-02T12:01:55.573Z [DEBUG] agent.http: Request finished: method=GET url=/v1/catalog/datacenters from=172.18.0.1:34706 latency="107.403µs"
+consul-server  | 2026-01-02T12:01:55.784Z [DEBUG] agent.http: Request finished: method=GET url="/v1/health/service/consul?dc=dc1&merge-central-config" from=172.18.0.1:34706 latency="407.915µs"
+consul-server  | 2026-01-02T12:01:58.566Z [DEBUG] agent.http: Request finished: method=GET url=/v1/operator/autopilot/state?dc=dc1 from=172.18.0.1:34706 latency="206.328µs"
+consul-server  | 2026-01-02T12:02:00.611Z [DEBUG] agent.http: Request finished: method=GET url=/v1/internal/ui/services?dc=dc1 from=172.18.0.1:34706 latency="228.774µs"
+consul-server  | 2026-01-02T12:02:02.009Z [DEBUG] agent: Skipping remote check since it is managed automatically: check=serfHealth
+consul-server  | 2026-01-02T12:02:02.009Z [DEBUG] agent: Node info in sync
+consul-server  | 2026-01-02T12:02:03.357Z [DEBUG] agent.http: Request finished: method=GET url="/v1/health/service/consul?dc=dc1&merge-central-config" from=172.18.0.1:34694 latency="484.1µs"
+consul-server  | 2026-01-02T12:02:03.422Z [DEBUG] agent.http: Request finished: method=GET url="/v1/catalog/connect/consul?dc=dc1&merge-central-config" from=172.18.0.1:34694 latency="196.389µs"
+consul-server  | 2026-01-02T12:02:03.424Z [DEBUG] agent.http: Request finished: method=GET url=/v1/discovery-chain/consul?dc=dc1 from=172.18.0.1:34710 latency=2.113736ms
+consul-server  | 2026-01-02T12:02:04.680Z [DEBUG] agent.http: Request finished: method=GET url=/v1/status/leader?dc=dc1 from=172.18.0.1:34710 latency="82.539µs"
+consul-server  | 2026-01-02T12:02:04.684Z [DEBUG] agent.http: Request finished: method=GET url=/v1/internal/ui/nodes?dc=dc1 from=172.18.0.1:34710 latency="397.288µs"
+consul-server  | 2026-01-02T12:02:05.409Z [DEBUG] agent.server.memberlist.lan: memberlist: Initiating push/pull sync with: 6eb77fd076b3 172.18.0.3:8301
+consul-server  | 2026-01-02T12:02:09.016Z [DEBUG] agent.server.memberlist.lan: memberlist: Stream connection from=172.18.0.3:48910
+consul-server  | 2026-01-02T12:02:10.446Z [DEBUG] agent.router.manager: Rebalanced servers, new active server: number_of_servers=1 active_server="0e49ca9a2b82.dc1 (Addr: tcp/172.18.0.2:8300) (DC: dc1)"
+consul-server  | 2026-01-02T12:02:10.447Z [DEBUG] agent.router.manager: Rebalanced servers, new active server: number_of_servers=1 active_server="0e49ca9a2b82 (Addr: tcp/172.18.0.2:8300) (DC: dc1)"
+consul-server  | 2026-01-02T12:02:35.385Z [DEBUG] agent.http: Request finished: method=GET url=/v1/status/leader?dc=dc1 from=172.18.0.1:34694 latency="153.467µs"
+consul-server  | 2026-01-02T12:02:35.410Z [DEBUG] agent.server.memberlist.lan: memberlist: Initiating push/pull sync with: 6eb77fd076b3 172.18.0.3:8301
+consul-server  | 2026-01-02T12:02:39.018Z [DEBUG] agent.server.memberlist.lan: memberlist: Stream connection from=172.18.0.3:48348
+consul-server  | 2026-01-02T12:03:05.412Z [DEBUG] agent.server.memberlist.lan: memberlist: Initiating push/pull sync with: 6eb77fd076b3 172.18.0.3:8301
+consul-server  | 2026-01-02T12:03:07.384Z [DEBUG] agent.http: Request finished: method=GET url=/v1/status/leader?dc=dc1 from=172.18.0.1:34694 latency="164.075µs"
+consul-server  | 2026-01-02T12:03:09.020Z [DEBUG] agent.server.memberlist.lan: memberlist: Stream connection from=172.18.0.3:45226
+consul-server  | 2026-01-02T12:03:24.281Z [DEBUG] agent: Skipping remote check since it is managed automatically: check=serfHealth
+consul-server  | 2026-01-02T12:03:24.281Z [DEBUG] agent: Node info in sync
+consul-server  | 2026-01-02T12:03:35.414Z [DEBUG] agent.server.memberlist.lan: memberlist: Initiating push/pull sync with: 6eb77fd076b3 172.18.0.3:8301
+consul-server  | 2026-01-02T12:03:39.023Z [DEBUG] agent.server.memberlist.lan: memberlist: Stream connection from=172.18.0.3:37580
+consul-server  | 2026-01-02T12:03:39.385Z [DEBUG] agent.http: Request finished: method=GET url=/v1/status/leader?dc=dc1 from=172.18.0.1:34694 latency="150.172µs"
+consul-server  | 2026-01-02T12:04:05.417Z [DEBUG] agent.server.memberlist.lan: memberlist: Initiating push/pull sync with: 6eb77fd076b3 172.18.0.3:8301
+consul-server  | 2026-01-02T12:04:09.025Z [DEBUG] agent.server.memberlist.lan: memberlist: Stream connection from=172.18.0.3:47518
+consul-server  | 2026-01-02T12:04:11.385Z [DEBUG] agent.http: Request finished: method=GET url=/v1/status/leader?dc=dc1 from=172.18.0.1:34694 latency="151.795µs"
+consul-server  | 2026-01-02T12:04:35.419Z [DEBUG] agent.server.memberlist.lan: memberlist: Initiating push/pull sync with: 6eb77fd076b3 172.18.0.3:8301
+consul-server  | 2026-01-02T12:04:39.027Z [DEBUG] agent.server.memberlist.lan: memberlist: Stream connection from=172.18.0.3:55682
+consul-server  | 2026-01-02T12:04:39.453Z [DEBUG] agent.router.manager: Rebalanced servers, new active server: number_of_servers=1 active_server="0e49ca9a2b82.dc1 (Addr: tcp/172.18.0.2:8300) (DC: dc1)"
+consul-server  | 2026-01-02T12:04:43.385Z [DEBUG] agent.http: Request finished: method=GET url=/v1/status/leader?dc=dc1 from=172.18.0.1:34694 latency="148.715µs"
+consul-server  | 2026-01-02T12:05:05.422Z [DEBUG] agent.server.memberlist.lan: memberlist: Initiating push/pull sync with: 6eb77fd076b3 172.18.0.3:8301
+consul-server  | 2026-01-02T12:05:09.029Z [DEBUG] agent.server.memberlist.lan: memberlist: Stream connection from=172.18.0.3:40758
+consul-server  | 2026-01-02T12:05:10.345Z [DEBUG] agent.router.manager: Rebalanced servers, new active server: number_of_servers=1 active_server="0e49ca9a2b82 (Addr: tcp/172.18.0.2:8300) (DC: dc1)"
+consul-server  | 2026-01-02T12:05:15.385Z [DEBUG] agent.http: Request finished: method=GET url=/v1/status/leader?dc=dc1 from=172.18.0.1:34694 latency="143.591µs"
+consul-server  | 2026-01-02T12:05:20.039Z [DEBUG] agent: Skipping remote check since it is managed automatically: check=serfHealth
+consul-server  | 2026-01-02T12:05:20.039Z [DEBUG] agent: Node info in sync
+consul-server  | 2026-01-02T12:05:35.424Z [DEBUG] agent.server.memberlist.lan: memberlist: Initiating push/pull sync with: 6eb77fd076b3 172.18.0.3:8301
+consul-server  | 2026-01-02T12:05:39.034Z [DEBUG] agent.server.memberlist.lan: memberlist: Stream connection from=172.18.0.3:45312
+consul-server  | 2026-01-02T12:05:47.382Z [DEBUG] agent.http: Request finished: method=GET url=/v1/status/leader?dc=dc1 from=172.18.0.1:34694 latency="73.571µs"
+
+
+w Enable Watch   d Detach

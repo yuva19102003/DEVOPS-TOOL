@@ -1,0 +1,14 @@
+raiden@raiden:~/DEVOPS-TOOL/Consul$ docker exec consul-server consul members
+Node          Address          Status  Type    Build   Protocol  DC   Partition  Segment
+0e49ca9a2b82  172.18.0.2:8301  alive   server  1.17.3  2         dc1  default    <all>
+6eb77fd076b3  172.18.0.3:8301  alive   client  1.17.3  2         dc1  default    <default>
+raiden@raiden:~/DEVOPS-TOOL/Consul$ docker cp web-sd.json consul-client:/web.json
+Successfully copied 2.05kB to consul-client:/web.json
+raiden@raiden:~/DEVOPS-TOOL/Consul$ docker exec consul-client consul services register /web.json
+Registered service: web
+raiden@raiden:~/DEVOPS-TOOL/Consul$ docker exec consul-server consul catalog services
+consul
+web
+raiden@raiden:~/DEVOPS-TOOL/Consul$
+
+

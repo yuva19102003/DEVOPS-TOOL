@@ -1,0 +1,42 @@
+raiden@raiden:~/DEVOPS-TOOL/Consul$ docker compose -f docker-compose-web.yml up
+WARN[0000] /home/raiden/DEVOPS-TOOL/Consul/docker-compose-web.yml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion 
+WARN[0000] Found orphan containers ([consul-client consul-server]) for this project. If you removed or renamed this service in your compose file, you can run this command with the --remove-orphans flag to clean it up. 
+[+] up 1/1
+ ✔ Container web Created                                                            0.1s 
+Attaching to web
+web  | /docker-entrypoint.sh: /docker-entrypoint.d/ is not empty, will attempt to perform configuration
+web  | /docker-entrypoint.sh: Looking for shell scripts in /docker-entrypoint.d/
+web  | /docker-entrypoint.sh: Launching /docker-entrypoint.d/10-listen-on-ipv6-by-default.sh
+web  | 10-listen-on-ipv6-by-default.sh: info: Getting the checksum of /etc/nginx/conf.d/default.conf
+web  | 10-listen-on-ipv6-by-default.sh: info: Enabled listen on IPv6 in /etc/nginx/conf.d/default.conf
+web  | /docker-entrypoint.sh: Sourcing /docker-entrypoint.d/15-local-resolvers.envsh
+web  | /docker-entrypoint.sh: Launching /docker-entrypoint.d/20-envsubst-on-templates.sh
+web  | /docker-entrypoint.sh: Launching /docker-entrypoint.d/30-tune-worker-processes.sh
+web  | /docker-entrypoint.sh: Configuration complete; ready for start up
+web  | 2026/01/02 12:09:35 [notice] 1#1: using the "epoll" event method
+web  | 2026/01/02 12:09:35 [notice] 1#1: nginx/1.29.4
+web  | 2026/01/02 12:09:35 [notice] 1#1: built by gcc 14.2.0 (Debian 14.2.0-19) 
+web  | 2026/01/02 12:09:35 [notice] 1#1: OS: Linux 6.14.0-37-generic
+web  | 2026/01/02 12:09:35 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1024:524288
+web  | 2026/01/02 12:09:35 [notice] 1#1: start worker processes
+web  | 2026/01/02 12:09:35 [notice] 1#1: start worker process 29
+web  | 2026/01/02 12:09:35 [notice] 1#1: start worker process 30
+web  | 2026/01/02 12:09:35 [notice] 1#1: start worker process 31
+web  | 2026/01/02 12:09:35 [notice] 1#1: start worker process 32
+web  | 2026/01/02 12:09:35 [notice] 1#1: start worker process 33
+web  | 2026/01/02 12:09:35 [notice] 1#1: start worker process 34
+web  | 2026/01/02 12:09:35 [notice] 1#1: start worker process 35
+web  | 2026/01/02 12:09:35 [notice] 1#1: start worker process 36
+web  | 2026/01/02 12:09:45 [error] 29#29: *2 open() "/usr/share/nginx/html/op.mp4" failed (2: No such file or directory), client: 172.18.0.1, server: localhost, request: "GET /op.mp4 HTTP/1.1", host: "localhost", referrer: "http://localhost/"
+web  | 172.18.0.1 - - [02/Jan/2026:12:09:45 +0000] "GET /op.mp4 HTTP/1.1" 404 555 "http://localhost/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36" "-"
+web  | 2026/01/02 12:09:45 [error] 30#30: *1 open() "/usr/share/nginx/html/jjk.mp4" failed (2: No such file or directory), client: 172.18.0.1, server: localhost, request: "GET /jjk.mp4 HTTP/1.1", host: "localhost", referrer: "http://localhost/"
+web  | 172.18.0.1 - - [02/Jan/2026:12:09:45 +0000] "GET /jjk.mp4 HTTP/1.1" 404 555 "http://localhost/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36" "-"
+web  | 2026/01/02 12:09:45 [error] 29#29: *2 open() "/usr/share/nginx/html/hajimi.mp4" failed (2: No such file or directory), client: 172.18.0.1, server: localhost, request: "GET /hajimi.mp4 HTTP/1.1", host: "localhost", referrer: "http://localhost/"
+web  | 2026/01/02 12:09:45 [error] 31#31: *3 open() "/usr/share/nginx/html/aot.mp4" failed (2: No such file or directory), client: 172.18.0.1, server: localhost, request: "GET /aot.mp4 HTTP/1.1", host: "localhost", referrer: "http://localhost/"
+web  | 172.18.0.1 - - [02/Jan/2026:12:09:45 +0000] "GET /aot.mp4 HTTP/1.1" 404 555 "http://localhost/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36" "-"
+web  | 172.18.0.1 - - [02/Jan/2026:12:09:45 +0000] "GET /hajimi.mp4 HTTP/1.1" 404 555 "http://localhost/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36" "-"
+web  | 2026/01/02 12:09:45 [error] 31#31: *4 open() "/usr/share/nginx/html/bleach.mp4" failed (2: No such file or directory), client: 172.18.0.1, server: localhost, request: "GET /bleach.mp4 HTTP/1.1", host: "localhost", referrer: "http://localhost/"
+web  | 172.18.0.1 - - [02/Jan/2026:12:09:45 +0000] "GET /bleach.mp4 HTTP/1.1" 404 555 "http://localhost/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36" "-"
+web  | 2026/01/02 12:09:46 [error] 31#31: *4 open() "/usr/share/nginx/html/favicon.ico" failed (2: No such file or directory), client: 172.18.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "localhost", referrer: "http://localhost/"
+web  | 172.18.0.1 - - [02/Jan/2026:12:09:46 +0000] "GET /favicon.ico HTTP/1.1" 404 555 "http://localhost/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36" "-"
+web  | 172.18.0.1 - - [02/Jan/2026:12:09:48 +0000] "GET / HTTP/1.1" 200 615 "-" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36" "-"
