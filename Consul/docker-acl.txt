@@ -1,0 +1,29 @@
+raiden@raiden:~/DEVOPS-TOOL/Consul$ docker exec consul-server consul acl bootstrap
+AccessorID:       05a92d7d-f0fa-b714-52ce-1f01d9cc5036
+SecretID:         3ea2f26b-7c0f-3a84-e5c1-24d3ef889a37
+Description:      Bootstrap Token (Global Management)
+Local:            false
+Create Time:      2026-01-03 12:06:21.61557215 +0000 UTC
+Policies:
+   00000000-0000-0000-0000-000000000001 - global-management
+
+
+
+export CONSUL_HTTP_TOKEN=3ea2f26b-7c0f-3a84-e5c1-24d3ef889a37
+
+raiden@raiden:~/DEVOPS-TOOL/Consul$ docker exec consul-server consul acl policy list   -token=3ea2f26b-7c0f-3a84-e5c1-24d3ef889a37
+builtin/global-read-only:
+   ID:           00000000-0000-0000-0000-000000000002
+   Description:  A built-in policy that grants read-only access to all Consul features
+   Datacenters:  
+global-management:
+   ID:           00000000-0000-0000-0000-000000000001
+   Description:  A built-in policy that grants read and write access to all Consul features
+   Datacenters:  
+
+raiden@raiden:~/DEVOPS-TOOL/Consul$ docker exec consul-server consul members \
+  -token=3ea2f26b-7c0f-3a84-e5c1-24d3ef889a37
+Node          Address          Status  Type    Build   Protocol  DC   Partition  Segment
+702a2c083195  172.18.0.2:8301  alive   server  1.17.3  2         dc1  default    <all>
+434f98c10bdd  172.18.0.3:8301  alive   client  1.17.3  2         dc1  default    <default>
+raiden@raiden:~/DEVOPS-TOOL/Consul$ 
