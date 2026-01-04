@@ -31,7 +31,7 @@ theme:
     - content.code.annotate
 
 docs_dir: ..
-site_dir: ../site
+site_dir: site
 
 plugins:
   - search:
