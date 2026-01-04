@@ -1,0 +1,158 @@
+site_name: DevOps Tools Documentation
+site_description: Comprehensive documentation and resources for DevOps tools and technologies
+site_author: DevOps Tools Repository
+site_url: https://yuva19102003.github.io/DEVOPS-TOOL
+
+theme:
+  name: material
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - navigation.tracking
+    - search.highlight
+    - search.share
+    - search.suggest
+    - toc.follow
+    - content.code.copy
+    - content.code.annotate
+
+docs_dir: ..
+site_dir: ../site
+
+plugins:
+  - search:
+      lang: en
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.tabbed:
+      alternate_style: true
+  - tables
+  - toc:
+      permalink: true
+      toc_depth: 3
+  - attr_list
+  - md_in_html
+  - def_list
+
+nav:
+  - Home: index.md
+  
+  - Containerization:
+    - Docker:
+      - Overview: Docker/README.md
+      - Installation: Docker/1-Installation.md
+      - Commands: Docker/2-commands.md
+      - Dockerfile: Docker/3-dockerfile.md
+      - Docker Compose: Docker/4-Docker-compose.md
+      - Advanced Topics: Docker/5-advanced-topics.md
+  
+  - CI/CD:
+    - Jenkins:
+      - Overview: Jenkins/README.md
+      - Java Maven Sonar ArgoCD Helm K8s: Jenkins/java-maven-sonar-argocd-helm-k8s/README.md
+      - Spring Boot App: Jenkins/java-maven-sonar-argocd-helm-k8s/spring-boot-app/README.md
+    - GitLab CI:
+      - GitLab CI Documentation: GitlabCI/gitlabci.md
+    - ArgoCD:
+      - ArgoCD Documentation: Argocd/README.md
+  
+  - Infrastructure as Code:
+    - Terraform:
+      - Overview: Terrraform/README.md
+      - Installation: Terrraform/installation/README.md
+      - Structure and Commands: Terrraform/Structure and Commands/README.md
+      - Advanced Configuration:
+        - Overview: Terrraform/Advanced Configuration/README.md
+        - Conditional Expressions and Built-in Functions: Terrraform/Advanced Configuration/conditional-expression-and-builtin-function.md
+        - Multi Providers Resources: Terrraform/Advanced Configuration/multi-providers-resources.md
+        - Variables and Output: Terrraform/Advanced Configuration/variable-output.md
+      - Modules: Terrraform/Modules/README.md
+      - Workspaces: Terrraform/Workspaces/README.md
+      - Remote Backend: Terrraform/remote backend/README.md
+      - Userdata and Provisioning: Terrraform/userdata and provisioning/README.md
+      - HashiCorp Vault Integration: Terrraform/hashicorp vault/README.md
+    - Packer:
+      - Packer Documentation: Packer/packer.md
+    - Ansible:
+      - Overview: ansible/0-ansible.md
+      - Password Authentication: ansible/1-password-authentication.md
+  
+  - Monitoring & Observability:
+    - Prometheus:
+      - Prometheus Helm: prometheus/prometheus-helm.md
+    - Grafana:
+      - Grafana Helm: grafana/grafana-helm.md
+    - OpenTelemetry:
+      - Overview: OpenTelemetry/OpenTelemetry.md
+      - Setup Code: OpenTelemetry/OpenTelemetry-Setup-Code.md
+  
+  - Security & Service Discovery:
+    - HashiCorp Vault:
+      - Documentation: HASHICORP-VAULT/Docs/docs.md
+      - Docker Setup: HASHICORP-VAULT/Docs/docker-setup.md
+    - Consul:
+      - Overview: Consul/Consul.md
+      - Docker Setup: Consul/consul-docker.md
+      - Docker ACL Setup: Consul/consul-docker-acl.md
+  
+  - Messaging & Streaming:
+    - RabbitMQ:
+      - Overview: RabbitMQ/rabbitmq.md
+      - Docker Compose Setup: RabbitMQ/docker-compose-rabbitmq.md
+      - UI Workflow: RabbitMQ/ui-workflow.md
+    - Apache Kafka:
+      - Overview: Apache-Kafka/apache-kafka.md
+      - Kafka UI: Apache-Kafka/kafka-ui.md
+    - Apache Airflow:
+      - Overview: Apache-Airflow/apache-airflow.md
+      - Docker Setup: Apache-Airflow/docker-setup.md
+  
+  - Databases & Caching:
+    - Redis:
+      - Redis Documentation: Redis/redis.md
+  
+  - Code Quality:
+    - SonarQube:
+      - Overview: SonarQube/README.md
+      - Server Setup: SonarQube/1-sonarqube-server-setup.md
+      - Project Local Scan: SonarQube/2-sonarqube-project-local-scan.md
+      - Local Scan Using Docker: SonarQube/3-sonarqube-local-scan-using-docker.md
+  
+  - Version Control:
+    - Git & GitHub:
+      - Git Commands: Git-Github/git_commands.md
+      - GitHub Token Environment Setup: Git-Github/github_token_env_linux.md
+  
+  - Programming:
+    - Go Lang:
+      - Overview: go lang/README.md
+      - Go Lang Tutorial: go lang/golang.md
+      - Installation: go lang/INSTALLATION/README.md
+    - Node.js:
+      - Overview: Nodejs/README.md
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/yuva19102003/DEVOPS-TOOL

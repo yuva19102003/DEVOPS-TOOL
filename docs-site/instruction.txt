@@ -1,0 +1,206 @@
+yuva@yuva:/mnt/c/Workspace/Development Workspace/DEVOPS-TOOL$ brew install mkdocs
+==> Auto-updating Homebrew...
+Adjust how often this is run with `$HOMEBREW_AUTO_UPDATE_SECS` or disable with
+`$HOMEBREW_NO_AUTO_UPDATE=1`. Hide these hints with `$HOMEBREW_NO_ENV_HINTS=1` (see `man brew`).
+==> Downloading https://ghcr.io/v2/homebrew/core/portable-ruby/blobs/sha256:63a9c333137e7cf8a568e0f37ec6802c22fbbdd5839f4825c863c26e415d2947
+######################################################################## 100.0%
+==> Pouring portable-ruby-3.4.8.x86_64_linux.bottle.tar.gz
+==> Homebrew collects anonymous analytics.
+Read the analytics documentation (and how to opt-out) here:
+  https://docs.brew.sh/Analytics
+No analytics have been recorded yet (nor will be during this `brew` run).
+
+==> Homebrew is run entirely by unpaid volunteers. Please consider donating:
+  https://github.com/Homebrew/brew#donations
+
+==> Auto-updated Homebrew!
+Updated 2 taps (homebrew/core and homebrew/cask).
+==> New Formulae
+adplay: Command-line player for OPL2 music
+astra: Command-Line Interface for DataStax Astra
+auto-editor: Efficient media analysis and rendering
+aws-spiffe-workload-helper: Helper for providing AWS credentials to workloads using their SPIFFE identity
+bookokrat: Terminal EPUB Book Reader
+bumpp: Interactive CLI that bumps your version numbers and more
+calm-cli: CLI allows you to interact with the Common Architecture Language Model (CALM)
+carl: Calendar for the command-line
+cinecli: Browse, inspect, and launch movie torrents directly from your terminal
+ctre: Compile-time PCRE-compatible regular expression matcher for C++
+custom-install: Install CIA files directly to Nintendo 3DS SD card
+depot: Build your Docker images in the cloud
+diffnav: Git diff pager based on delta but with a file tree
+dnspyre: CLI tool for a high QPS DNS benchmark
+docker-language-server: Language server for Dockerfiles, Compose files, and Bake files
+dotnet@9: .NET Core
+e1s: TUI for managing AWS ECS, inspired by k9s
+faketty: Wrapper to exec a command in a pty, even if redirecting the output
+fastrace: Dependency-free traceroute implementation in pure C
+flecs: Fast entity component system for C & C++
+fresh-editor: Text editor for your terminal: easy, powerful and fast
+garage: S3 object store so reliable you can run it outside datacenters
+git-get: Better way to clone, organize and manage multiple git repositories
+git-pages: Scalable static site server for Git forges
+git-pages-cli: Tool for publishing a site to a git-pages server
+git-xet: Git LFS plugin that uploads and downloads using the Xet protocol
+gitlogue: Cinematic Git commit replay tool
+global-arrays: Partitioned Global Address Space (PGAS) library for distributed arrays
+goat: General purpose AT Protocol CLI in Go
+gtl: Greg's Template Library of useful classes
+gup: Update binaries installed by go install
+hayagriva: Bibliography management tool
+headson: Head/tail for structured data
+html-to-markdown: Transforms HTML (even entire websites) into clean, readable Markdown
+install-nothing: Simulates installing things but doesn't actually install anything
+joyce: Emulates the Amstrad PCW on Unix, Windows and macOS
+jsonfmt: Like gofmt, but for JSON files
+khaos: Kafka traffic simulator for observability and chaos engineering
+klog: Command-line tool for time tracking in a human-readable, plain-text file format
+kubernetes-cli@1.34: Kubernetes command-line interface
+kyua: Testing framework for infrastructure software
+labctl: CLI tool for interacting with iximiuz labs and playgrounds
+libevdev: Wrapper library for evdev devices
+lispkit: Scheme framework for extension and scripting languages on macOS and iOS
+macchanger: Change your mac address, for macOS
+maigret: Collect a dossier on a person by username from thousands of sites
+mail-deduplicate: CLI to deduplicate mails from mail boxes
+mapscii: Whole World In Your Console
+matcha: Daily digest generator for your RSS feeds
+mcp-scan: Constrain, log and scan your MCP connections for security vulnerabilities
+mistral-vibe: Minimal CLI coding agent
+mole: Deep clean and optimize your Mac
+mq: Jq-like command-line tool for markdown processing
+mufetch: Neofetch-style music cli
+neo4j-mcp: Neo4j official Model Context Protocol server for AI tools
+netshow: Interactive network connection monitor with friendly service names
+nkt: TUI for fast and simple interacting with your BibLaTeX database
+octodns: Tools for managing DNS across multiple providers
+papeer: Convert websites into eBooks and Markdown
+papis: Powerful command-line document and bibliography manager
+patchpal: AI Assisted Patch Backporting Tool Frontend
+phantom: CLI tool for seamless parallel development with Git worktrees
+pixlet: App runtime and UX toolkit for pixel-based apps
+pony-language-server: Language server for Pony
+pvetui: Terminal UI for Proxmox VE
+py7zr: 7-zip in Python
+qqqa: Fast, stateless LLM for your shell: qq answers; qa runs commands
+rad: Modern CLI scripts made easy
+redu: Ncdu for your restic repository
+rmrfrs: Filesystem cleaning tool
+rockcraft: Tool to create OCI images using the language from Snapcraft and Charmcraft
+ruby@3.4: Powerful, clean, object-oriented scripting language
+save3ds_fuse: Extract/Import/FUSE for 3DS save/extdata/database
+slicot: Fortran subroutines library for systems and control
+snitch: Prettier way to inspect network connections
+superseedr: BitTorrent Client in your Terminal
+svt-vp9: Scalable Video Technology for VP9 Encoder
+svu: Semantic version utility
+talm: Manage Talos Linux configurations the GitOps way
+termshot: Creates screenshots based on terminal command output
+tfclean: Remove applied moved block, import block, etc
+thorvg: Lightweight portable library used for drawing vector-based scenes and animations
+toktop: LLM usage monitor in terminal
+topydo: Todo list application using the todo.txt format
+tree-sitter@0.25: Incremental parsing library
+treemd: TUI and CLI dual pane markdown viewer
+tronbyt-server: Manage your apps on your Tronbyt (flashed Tidbyt) completely locally
+ty: Extremely fast Python type checker, written in Rust
+vacuum: World's fastest OpenAPI & Swagger linter
+wasm-bindgen: Facilitating high-level interactions between Wasm modules and JavaScript
+wifitui: Fast featureful friendly wifi terminal UI
+witr: Why is this running?
+wuchale: Protobuf-like i18n from plain code
+xleak: Terminal Excel viewer with an interactive TUI
+
+You have 12 outdated formulae installed.
+
+==> Fetching downloads for: mkdocs
+✔︎ Bottle Manifest mkdocs (1.6.1_2)                                                                                              Downloaded   19.5KB/ 19.5KB
+✔︎ Bottle Manifest libyaml (0.2.5)                                                                                               Downloaded   14.5KB/ 14.5KB
+✔︎ Bottle libyaml (0.2.5)                                                                                                        Downloaded  125.8KB/125.8KB
+✔︎ Bottle mkdocs (1.6.1_2)                                                                                                       Downloaded    4.7MB/  4.7MB
+==> Installing mkdocs dependency: libyaml
+==> Pouring libyaml--0.2.5.x86_64_linux.bottle.tar.gz
+🍺  /home/linuxbrew/.linuxbrew/Cellar/libyaml/0.2.5: 12 files, 403.7KB
+==> Pouring mkdocs--1.6.1_2.x86_64_linux.bottle.2.tar.gz
+🍺  /home/linuxbrew/.linuxbrew/Cellar/mkdocs/1.6.1_2: 481 files, 9.9MB
+==> Running `brew cleanup mkdocs`...
+Disable this behaviour by setting `HOMEBREW_NO_INSTALL_CLEANUP=1`.
+Hide these hints with `HOMEBREW_NO_ENV_HINTS=1` (see `man brew`).
+==> `brew cleanup` has not been run in the last 30 days, running now...
+Disable this behaviour by setting `HOMEBREW_NO_INSTALL_CLEANUP=1`.
+Hide these hints with `HOMEBREW_NO_ENV_HINTS=1` (see `man brew`).
+Removing: /home/yuva/.cache/Homebrew/portable-ruby-3.4.7.x86_64_linux.bottle.tar.gz... (13.9MB)
+Removing: /home/yuva/.cache/Homebrew/bootsnap/79fc0460be2f6da73637a2efff48c5e0141338874e7ed90266118e3772323883... (697 files, 6.7MB)
+Removing: /home/linuxbrew/.linuxbrew/var/homebrew/tmp/.cellar/icu4c@78... (278 files, 93.4MB)
+Removing: /home/linuxbrew/.linuxbrew/var/homebrew/tmp/.cellar/openssl@3... (7,618 files, 44.8MB)
+Removing: /home/linuxbrew/.linuxbrew/var/homebrew/tmp/.cellar/c-ares... (175 files, 1.3MB)
+Removing: /home/linuxbrew/.linuxbrew/var/homebrew/tmp/.cellar/bzip2... (30 files, 604.3KB)
+Removing: /home/linuxbrew/.linuxbrew/var/homebrew/tmp/.cellar/libngtcp2... (22 files, 1.5MB)
+Removing: /home/linuxbrew/.linuxbrew/var/homebrew/tmp/.cellar/simdjson... (18 files, 6.9MB)
+Removing: /home/linuxbrew/.linuxbrew/var/homebrew/tmp/.cellar/python@3.14... (3,297 files, 78.1MB)
+Removing: /home/linuxbrew/.linuxbrew/var/homebrew/tmp/.cellar/readline... (55 files, 3MB)
+Removing: /home/linuxbrew/.linuxbrew/var/homebrew/tmp/.cellar/libedit... (60 files, 1.8MB)
+Removing: /home/linuxbrew/.linuxbrew/var/homebrew/tmp/.cellar/lz4... (23 files, 809KB)
+Removing: /home/linuxbrew/.linuxbrew/var/homebrew/tmp/.cellar/libnghttp2... (14 files, 905.7KB)
+Removing: /home/linuxbrew/.linuxbrew/var/homebrew/tmp/.cellar/brotli... (32 files, 2MB)
+Removing: /home/linuxbrew/.linuxbrew/var/homebrew/tmp/.cellar/zlib... (12 files, 484.2KB)
+Removing: /home/linuxbrew/.linuxbrew/var/homebrew/tmp/.cellar/expat... (22 files, 889.4KB)
+Removing: /home/linuxbrew/.linuxbrew/var/homebrew/tmp/.cellar/libuv... (33 files, 1.5MB)
+Removing: /home/linuxbrew/.linuxbrew/var/homebrew/tmp/.cellar/sqlite... (12 files, 6.7MB)
+Removing: /home/linuxbrew/.linuxbrew/var/homebrew/tmp/.cellar/berkeley-db@5... (5,270 files, 91.8MB)
+Removing: /home/linuxbrew/.linuxbrew/var/homebrew/tmp/.cellar/libnghttp3... (19 files, 719.6KB)
+Removing: /home/linuxbrew/.linuxbrew/var/homebrew/tmp/.cellar/ca-certificates... (3 files, 259.2KB)
+Removing: /home/linuxbrew/.linuxbrew/var/homebrew/tmp/.cellar/unzip... (16 files, 471.7KB)
+Removing: /home/linuxbrew/.linuxbrew/var/homebrew/tmp/.cellar/mpdecimal... (21 files, 803.9KB)
+Removing: /home/linuxbrew/.linuxbrew/var/homebrew/tmp/.cellar/ncurses... (4,035 files, 11.4MB)
+Removing: /home/linuxbrew/.linuxbrew/var/homebrew/tmp/.cellar/libffi... (18 files, 834.6KB)
+Removing: /home/linuxbrew/.linuxbrew/var/homebrew/tmp/.cellar/uvwasi... (14 files, 361.5KB)
+Removing: /home/linuxbrew/.linuxbrew/var/homebrew/tmp/.cellar/zstd... (31 files, 3.1MB)
+Removing: /home/linuxbrew/.linuxbrew/var/homebrew/tmp/.cellar/xz... (96 files, 2.7MB)
+==> Caveats
+Bash completion has been installed to:
+  /home/linuxbrew/.linuxbrew/etc/bash_completion.d
+yuva@yuva:/mnt/c/Workspace/Development Workspace/DEVOPS-TOOL$ brew install pipx
+==> Fetching downloads for: pipx
+✔︎ Bottle Manifest pipx (1.8.0)                                                                                                  Downloaded    4.7KB/  4.7KB
+✔︎ Bottle pipx (1.8.0)                                                                                                           Downloaded  279.4KB/279.4KB
+==> Pouring pipx--1.8.0.all.bottle.1.tar.gz
+🍺  /home/linuxbrew/.linuxbrew/Cellar/pipx/1.8.0: 157 files, 1.3MB
+==> Running `brew cleanup pipx`...
+Disable this behaviour by setting `HOMEBREW_NO_INSTALL_CLEANUP=1`.
+Hide these hints with `HOMEBREW_NO_ENV_HINTS=1` (see `man brew`).
+==> Caveats
+Bash completion has been installed to:
+  /home/linuxbrew/.linuxbrew/etc/bash_completion.d
+yuva@yuva:/mnt/c/Workspace/Development Workspace/DEVOPS-TOOL$ pipx ensurepath
+Success! Added /home/yuva/.local/bin to the PATH environment variable.
+
+Consider adding shell completions for pipx. Run 'pipx completions' for instructions.
+
+You will need to open a new terminal or re-login for the PATH changes to take effect. Alternatively, you can source your shell's config file with e.g.
+'source ~/.bashrc'.
+
+Otherwise pipx is ready to go! ✨ 🌟 ✨
+yuva@yuva:/mnt/c/Workspace/Development Workspace/DEVOPS-TOOL$ pipx install mkdocs-material
+Note: Dependent package 'babel' contains 1 apps
+  - pybabel
+Note: Dependent package 'markdown' contains 1 apps
+  - markdown_py
+Note: Dependent package 'mkdocs' contains 1 apps
+  - mkdocs
+Note: Dependent package 'ghp-import' contains 1 apps
+  - ghp-import
+Note: Dependent package 'mkdocs-get-deps' contains 1 apps
+  - mkdocs-get-deps
+Note: Dependent package 'watchdog' contains 1 apps
+  - watchmedo
+Note: Dependent package 'pygments' contains 1 apps
+  - pygmentize
+Note: Dependent package 'charset-normalizer' contains 1 apps
+  - normalizer
+
+No apps associated with package mkdocs-material. Try again with '--include-deps' to include apps of dependent packages, which are listed above. If you
+are attempting to install a library, pipx should not be used. Consider using pip or a similar tool instead.
+yuva@yuva:/mnt/c/Workspace/Development Workspace/DEVOPS-TOOL$ mkdocs --version
+mkdocs, version 1.6.1 from /home/linuxbrew/.linuxbrew/Cellar/mkdocs/1.6.1_2/libexec/lib/python3.14/site-packages/mkdocs (Python 3.14)
+yuva@yuva:/mnt/c/Workspace/Development Workspace/DEVOPS-TOOL$ 
