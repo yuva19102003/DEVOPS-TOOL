@@ -1,0 +1,67 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: backend-v1
+  namespace: go-mesh
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: backend
+      version: v1
+  template:
+    metadata:
+      labels:
+        app: backend
+        version: v1
+    spec:
+      containers:
+      - name: backend
+        image: go-mesh-demo:backend
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 8080
+        env:
+        - name: RESPONSE_MESSAGE
+          value: "Hello from Backend V1 🚀"
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: backend-v2
+  namespace: go-mesh
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: backend
+      version: v2
+  template:
+    metadata:
+      labels:
+        app: backend
+        version: v2
+    spec:
+      containers:
+      - name: backend
+        image: go-mesh-demo:backend
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 8080
+        env:
+        - name: RESPONSE_MESSAGE
+          value: "Hello from Backend V2 🚀"
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: backend
+  namespace: go-mesh
+spec:
+  selector:
+    app: backend
+  ports:
+  - port: 80
+    targetPort: 8080

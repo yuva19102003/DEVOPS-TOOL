@@ -1,0 +1,37 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: frontend
+  namespace: go-mesh
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: frontend
+  template:
+    metadata:
+      labels:
+        app: frontend
+    spec:
+      containers:
+      - name: frontend
+        image: go-mesh-demo:frontend
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 8081
+        env:
+        - name: BACKEND_URL
+          value: "http://backend/hello"
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: frontend
+  namespace: go-mesh
+spec:
+  selector:
+    app: frontend
+  ports:
+  - port: 80
+    targetPort: 8081
